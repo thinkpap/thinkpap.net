@@ -1,0 +1,137 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body class="ctrol_body">
+<form class="form">
+  <header class="rows headertab">
+    <ul id="tm">
+      <li onclick="PaPtabs(this, 0);" class="pactive"><span class="btn btn-default"><i class="fa fa-paste"></i><em>基本信息</em>
+    </span></li><li onclick="PaPtabs(this, 1);"><span class="btn btn-default"><i class="fa fa-file-text"></i><em>文章内容</em>
+    </span></li><li onclick="PaPtabs(this, 2);"><span class="btn btn-default"><i class="fa fa-cogs"></i><em>SEO优化</em>
+    </span></li><li onclick="PaPtabs(this, 3);"><span class="btn btn-default"><i class="fa fa-users"></i><em>选项权限</em>
+    </span></li><li onclick="PaPtabs(this, 4);"><span class="btn btn-default"><i class="fa fa-columns"></i><em>相关信息</em></span></li>
+    </ul>
+  </header>
+
+  <section class="t_line" id="tmC0">
+    <dl>
+      <dt>简短标题：</dt><dd><input class="inp" name="title" type='text' value='' datatype="*" nullmsg="请填写标题"></dd>
+      <dt>完整标题：</dt><dd><input class="inp" name="fulltitle" type='text' value='' datatype="*" nullmsg="请填写完整标题"></dd>
+    </dl>
+    <dl>
+      <dt>头条标题：</dt><dd><input class="inp" name="toptitle" type='text' value='' datatype="*" nullmsg="请填写头条标题"></dd>
+      <dt>图片标题：</dt><dd><input class="inp " name="pictitle" type='text' value='' datatype="*" nullmsg="请填写图片标题"></dd>
+    </dl>
+    <dl>
+      <dt>所属栏目：</dt><dd><span class="select f"><select class="inp"><option value='' selected>- 选择归属栏目 -</option><option value=''>默认id↓</option></select><i class="fa fa-angle-down"></i></span></dd>
+      <dt>文章属性：</dt><dd>
+        <div class="cka">
+          <label><input type="checkbox" name="recommend" datatype="*"><span>推荐</span></label>
+          <label><input type="checkbox" name="video"><span>视频</span></label>
+          <label><input type="checkbox" name="scoll"><span>滚动</span></label>
+          <label><input type="checkbox" name="head"><span>头条</span></label>
+          <label><input type="checkbox" name="hot"><span>热门</span></label>
+          <label><input type="checkbox" name="top"><span>固顶</span></label>
+          <label><input type="checkbox" name="slider"><span>幻灯</span></label>
+          <label><input type="checkbox" name="comment"><span>允许评论</span></label>
+        </div></dd>
+    </dl>
+    <dl>
+      <dt>转向连接：</dt><dd><input class="inp " name="" type='text' value=''></dd>
+      <dt>
+        <div class="cka"><label><input type="checkbox" name="recommend" class="colored-blue"><span>使用转向链接</span></label>
+        </div></dt>
+    </dl>
+    <dl><dt>关 键 字：</dt><dd><input class="inp " name="" type='text' value=''></dd></dl>
+    <dl>
+      <dt>文章作者：</dt><dd><input class="inp " name="" type='text' value=''> </dd>
+      <dt><span class="select w100"><select name="" class="inp"><option value='' selected>选择作者</option><option value=''>默认id↓</option></select><i class="fa fa-angle-down"></i></span></dt>
+    </dl>
+
+    <dl>
+      <dt>文章来源：</dt>
+      <dd><input class="inp " name="" type='text' value=''> </dd>
+      <dt><span class="select w100"><select name="" class="inp"><option value='' selected>选择来源</option><option value=''>默认id↓</option></select><i class="fa fa-angle-down"></i></span></dt>
+    </dl>
+
+    <dl>
+      <dt>选择地区：</dt>
+      <dd>
+        <span class="select w100"><select name="province" class="inp"></select><i class="fa fa-angle-down"></i></span>
+        <span class="select w100"><select name="city" class="inp"></select><i class="fa fa-angle-down"></i></span>
+        <span class="select w100"><select name="area" class="inp"></select><i class="fa fa-angle-down"></i></span>
+      </dd>
+    </dl>
+
+    <dl>
+      <dt>添加日期：</dt><dd><input class="inp " name="" type='text' value='' onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss' });"></dd>
+      <dt>点击次数：</dt><dd><input class="inp " name="" type='text' value=''></dd>
+    </dl>
+
+    <dl><dt>地图坐标：</dt><dd><input class="inp " name="" type='text' value=''></dd></dl>
+
+    <dl>
+      <dt>模板绑定：</dt>
+      <dd>
+        <div class="cka pr10">
+          <label><input type="radio" checked="checked" value='0' name='templateflag' onclick='GetFileNameArea(false);'><span>自动生成</span></label>
+          <label><input type="radio" value='1' name='templateflag' onclick='GetFileNameArea(true);'><span>自定义</span></label>
+        </div>
+        <input class='inp w350' id='TemplateID' name='TemplateID' readonly size=50 value=''><button class="btn btn-blue"><em>选择模板</em></button>
+        <input class='inp w350' id='WapTemplateID' name='WapTemplateID' readonly size=50 value=''><button class="btn btn-blue"><em>选择模板</em></button>
+      </dd>
+    </dl>
+    <dl>
+      <dt>文 件 名：</dt>
+      <dd>
+        <div class="cka pr10">
+          <label><input type="radio" checked="checked" value='0' name='filetype' onclick='GetFileNameArea(false);'><span>自动生成</span></label>
+          <label><input type="radio" value='1' name='filetype' onclick='GetFileNameArea(true);'><span>自定义</span></label>
+        </div>
+        <input class='inp w350' name='FileName' type='text' id='FileName' value='' size='45'>
+      </dd>
+    </dl>
+    <dl>
+      <dt>审核状态：</dt>
+      <dd>
+        <div class="cka">
+          <label><input name="fileverify" type="radio" value='1' checked="checked"><span>已经审核</span></label>
+          <label><input name="fileverify" type="radio" value='0'><span>尚未审核</span></label>
+        </div>
+      </dd>
+    </dl>
+  </section>
+
+
+
+  <section class="t_line none" id="tmC1">
+    <dl><span class="ico-inp ico-r"><textarea rows="4" placeholder="文章导读"></textarea><i class="fa fa-edit purple"></i></span></dl>
+    <dl>
+      <script id="editor" type="text/plain" style="width: 100%; height: 500px;">
+        </script>
+      <script type="text/javascript">
+
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+
+
+      </script>
+
+    </dl>
+    <dl><dt>图片地址：</dt><dd><input class="inp w400" id="" name="" type='text' value=''><span class="btn btn-blue"><em>选择文件并上传</em></span><span class="btn btn-blue"><em >选择文件</em></span> <span class="btn btn-blue"><em>远程抓取</em></span></dd></dl>
+  </section>
+
+
+  <script>botctrls();</script>
+
+</form>
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageend.js"></script>
+
+</body>
+</html>

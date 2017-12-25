@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html lang="zh_cn">
+<head>
+  <title>-ThinkUI</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="../../../../g.js"></script>
+  <script src="../../../../models-assets/Tui-make/demoload.js"></script>
+  <script src="../../../../models-assets/Tui-make/demofun.js"></script>
+  <link href="../../../../models-assets/Tui-make/demo.css" rel="stylesheet" />
+</head>
+<body class="">
+  <div class="demobox">
+    <script>basebut()</script>
+    <div class="iframeWrap">
+      <iframe allowTransparency="true" scrolling="yes" src="../demo/table.html?&&&bordered&&&&&&&&&&&&&&&&" frameborder="0"></iframe>
+    </div>
+
+    <div class="params pt20 pr15 pb20 pl10">
+      <table class="bordered">
+        <thead class="th-blue"><tr><th width="100">表格控制</th><th class="100">取值</th><th>表格控制</th><th width="100">取值</th></tr></thead>
+        <tbody class="striped">
+          <tr>
+            <td>表格大小</td>
+            <td><span class="select w100"><select class="inp" name="tablesize"><option value="" selected>默认大小</option><option value="table_mn">table_mn</option><option value="table_sm">table_sm</option><option value="table_lg">table_lg</option><option value="table_xl">table_xl</option></select><i class="fa fa-angle-down"></i></span></td>
+            <td>自动换行</td>
+            <td><span class="select w100"><select class="inp" name="break"><option value="" selected>默认不换行</option><option value="break-word">换行</option></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+          <tr>
+            <td>是否边框</td>
+            <td><span class="select w100"><select class="inp" name="bordered"><option value="bordered" selected>有边框</option><option value="">无边框</option></select><i class="fa fa-angle-down"></i></span></td>
+            <td>表格外框</td>
+            <td><span class="select w100"><select class="inp" name="tableborder"><option value="" selected>无边框</option><option value="table-border">有边框</option></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+          <tr>
+            <td>垂直表格</td>
+            <td><span class="select w100"><select class="inp" name="vertical"><option value="" selected>非垂直</option><option value="v">垂直表格</option></select><i class="fa fa-angle-down"></i></span></td>
+            <td>横线表格</td>
+            <td><span class="select w100"><select class="inp" name="line"><option value="" selected>非横线表格</option><option value="table-line">横线表格</option></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+          <tr>
+            <td>纵向对齐</td>
+            <td><span class="select w100"><select class="inp" name="vline"><option value="" selected>默认居中</option><option value="table-vt">顶部对齐</option><option value="table-vb">底部对齐</option></select><i class="fa fa-angle-down"></i></span></td>
+            <td>横向对齐</td>
+            <td><span class="select w100"><select class="inp" name="hline"><option value="" selected>默认居左</option><option value="txt-c">居中对齐</option><option value="txt-r">居右对齐</option></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+
+          <tr>
+          <td>表头背景</td>
+          <td><span class="select w100"><select class="inp" name="thbd"><option value="" selected>默认背景</option><script>document.write(thbd)</script></select><i class="fa fa-angle-down"></i></span></td>
+          <td>表格边框</td>
+          <td><span class="select w100"><select class="inp" name="tdbd"><option value="" selected>默认背景</option><script>document.write(tdbd)</script></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+
+          <tr>
+          <td>隔行换浅色</td>
+          <td><span class="select w100"><select class="inp" name="stripedq"><option value="" selected>不换色</option><option value="striped">默认换色</option><script>document.write(stripedq)</script></select><i class="fa fa-angle-down"></i></span></td>
+          <td>隔行换深色</td>
+          <td><span class="select w100"><select class="inp" name="stripeds" disabled=""><option value="" selected>不换色</option><option value="striped">默认换色</option><script>document.write(stripeds)</script></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+
+          <tr>
+          <td>浅色背景</td>
+          <td><span class="select w100"><select class="inp" name="bglight"><option value="" selected>无色彩</option><script>document.write(bglight)</script></select><i class="fa fa-angle-down"></i></span></td>
+          <td>深色背景</td>
+          <td><span class="select w100"><select class="inp" name="bgdeep"><option value="" selected>无色彩</option><script>document.write(bgdeep)</script></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+        <tr>
+          <td>背景边框</td>
+          <td><span class="select w100"><select class="inp" name="bgdepbd"><option value="" selected>有边框</option><option value="bdn">无边框</option></select><i class="fa fa-angle-down"></i></span></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+
+
+        <tr>
+          <td>滑过浅色</td>
+          <td><span class="select w100"><select class="inp" name="hoverlight"><option value="" selected>无效果</option><option value="hover">默认效果</option><script>document.write(hoverlbg)</script></select><i class="fa fa-angle-down"></i></span></td>
+          <td>滑过深色</td>
+          <td><span class="select w100"><select class="inp" name="hoverdeep"><option value="" selected>无效果</option><script>document.write(hoverdbg)</script></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+          <tr>
+            <td>单元格强调</td>
+            <td><span class="select w100"><select class="inp" name="tdimport"><option value="" selected>无效果</option><script>document.write(tdimport)</script></select><i class="fa fa-angle-down"></i></span></td>
+            <td>单元格左边框</td>
+            <td><span class="select w100"><select class="inp" name="tdimportbd"><option value="" selected>无效果</option><script>document.write(tdimportbd)</script></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+          <tr>
+            <td>行左边框</td>
+            <td><span class="select w100"><select class="inp" name="hoverlight"><option value="" selected>无效果</option><option value="hover">默认效果</option><script>document.write(hoverbg)</script></select><i class="fa fa-angle-down"></i></span></td>
+            <td>行滑过浅色左边框</td>
+            <td><span class="select w100"><select class="inp" name="hoverlight"><option value="" selected>无效果</option><option value="hover">默认效果</option><script>document.write(hoverbg)</script></select><i class="fa fa-angle-down"></i></span></td>
+          </tr>
+       </tbody>
+      </table>
+
+      
+      
+    </div>
+
+  </div>
+
+  <script src="../../../../models-assets/Tui-make/demoend.js"></script>
+</body>
+</html>

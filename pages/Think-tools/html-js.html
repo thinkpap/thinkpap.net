@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="zh_cn">
+<head>
+  <title>html-js互转</title>
+  <meta name="keywords" content="html-js互转">
+  <meta name="description" content="html-js互转">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script>var classname = "html-js互转"</script>
+  <script src="../../g.js"></script>
+  <script src="../../models-assets/Tui-Api/load-api.js"></script>
+  <script src="../../models-assets/Think-tools/load-tool1.js"></script>
+</head>
+<body>
+<header class="bg-blue top-fix">
+  <div class="tip-app-logo"></div>
+  <div class="f-l hid-xs">
+    <a class="btn btn_40 btn-blue" href="http://www.thinkpap.net"><i class="fa fa-home"></i> <em>网站首页</em>
+      </a><a class="btn btn_40 btn-blue" href="../Tui-api/index.html"><em>文档首页</em>
+      </a><a class="btn btn_40 btn-blue" href="index.html"><em>工具首页</em></a>
+  </div>
+  <div class="s-btn dropdown f-r">
+    <a href="javascript:void(0);" data-toggle="dropdown" class="btn btn_40 ico btn-blue"><i class="fa fa-navicon i"></i></a>
+    <div class="drop tip-app-drop right">
+      <script>links();</script>
+    </div>
+  </div>
+  <div class="tip-app-logo"></div>
+  <div class="tip-app-title">
+    <script>document.write(classname)</script>
+  </div>
+</header>
+
+
+<div class="row pl15 pr15">
+  <aside class="col-sm-2 hid-xs">
+    <div class="cross border-l3"><h1>HTML-JS-CSS工具</h1></div>
+    <div class="cms pt10">
+      <ul class="ul_list hover-ivory">
+        <li><a href="csstand.html" class="blank a">Css格式化</a></li><li class="lines"></li>
+          <li><a href="html-js.html" class="blank a">HTML-JS 代码互转</a></li><li class="lines"></li>
+          <li><a href="jstand.html" class="blank a">HTML-JS 加密/格式化</a></li><li class="lines"></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section class="col-xs-12 col-sm-10 col-lg-10 pl30 xs-pln">
+
+    <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-6"><textarea id="osource" name="content" class="inp" style="height:250px" placeholder="原始HTML"></textarea></div>
+      <div class="col-xs-12 col-sm-6 pl15 xs-pln"><textarea id="oresult2" name="content" class="inp" style="height:250px" placeholder="转换JS"></textarea></div>    
+    </div>
+
+    <hr class="col-xs-12 f-l"/>
+    <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-6">
+        <textarea id="oresult" name="content" class="inp" style="height:250px" placeholder="原始JS"></textarea>
+      </div>
+      <div class="col-xs-12 col-sm-6 pl15 xs-pln">
+        <textarea id="re" name="content" class="inp" style="height:250px" placeholder="HTML"></textarea>
+      </div>
+    </div>
+  </section>
+  </div>
+  <script>     hcj.htmljs();</script>
+
+  <script>footers();</script>
+</body>
+</html>

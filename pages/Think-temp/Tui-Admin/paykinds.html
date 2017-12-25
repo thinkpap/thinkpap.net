@@ -1,0 +1,52 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+
+<section class="pn">
+  <table>
+    <thead class="strong">
+    <tr>
+      <th width='70'>ID</th>
+      <th width='150'>支付平台</th>
+      <th width='200'>商家ID</th>
+      <th>支付平台备注</th>
+      <th width='80'>手续费</th>
+      <th width='60'>默认</th>
+      <th width='60'>启用</th>
+      <th width='60'>修改</th>
+      <th width='80'>申请</th>
+    </tr>
+    </thead>
+    <tbody class="txt-c striped">
+      <script>
+          var paylout = "";
+          var ifcheck = { 1: 'checked', 2: '' };
+          var pay = { "name": ["网银在线", "支付宝即时到账", "支付宝标准双接口", "支付宝担保交易", "财付通中介交易", "财付通双接口交易", "财付通即时到账", "微信支付", "银联在线支付"] };
+          for (var i = 0; i < pay.name.length; i++) {
+            paylout += "<tr>";
+            paylout += "<td>" + i + "</td>";
+            paylout += "<td class='txt-l'>" + pay.name[i] + "</td>";
+            paylout += "<td class='txt-l'>6499990098@qq.com</td>";
+            paylout += "<td class='txt-l'>国内首家零费率，非常不错</td>";
+            paylout += "<td>" + (Math.floor(Math.random() * 5) + 1) + "%</td>";
+            paylout += "<td><div class='cka'><label><input id='moren' name='moren' type='radio' " + ifcheck[(Math.floor(Math.random() * 2) + 1)] + "><span></span></label></div></td>";
+            paylout += "<td><div class='cka'><label><input id='qiyong' name='qiyong' type='checkbox' " + ifcheck[(Math.floor(Math.random() * 2) + 1)] + "><span></span></label></div></td>";
+            paylout += "<td><a>修改</a></td>";
+            paylout += "<td class='line-1'><a class='btn btn_22 btn-blue'><i class='fa fa-plus'></i><span class='ct'>申请</span></a></td>";
+            paylout += "</tr>";
+          }
+          document.write(paylout);
+      </script>
+
+
+    </tbody>
+  </table>
+</section>
+</body>
+</html>

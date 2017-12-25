@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="zh_cn">
+<head>
+  <title></title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="../../../thinkplus/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link href="../../../thinkui/css/Tui.css" rel="stylesheet" />
+  <link href="../../../models-assets/Think-temp/Tp-Manage/style-back.css" rel="stylesheet" />
+  <script src="../../../thinkui/js/css-param.js"></script>
+  <script src="../../../thinkui/js/css-style.js"></script>
+  <script src="../../../thinkplus/jquery/jquery-2.1.4.js"></script>
+  <script src="../../../thinkui/js/tui.js"></script>
+  <script>function PaPtabs(thisObj,num){if(thisObj.className=="pactive")return;var tabObj=thisObj.parentNode.id;var tabList=document.getElementById(tabObj).getElementsByTagName("li");for(i=0;i<tabList.length;i++){if(i==num){thisObj.className="pactive";document.getElementById(tabObj+"C"+i).style.display="block"}else{tabList[i].className="pnormal";document.getElementById(tabObj+"C"+i).style.display="none"}}};
+</script>
+</head>
+<body>
+  <script>
+$(function(){
+  $(".frame").attr('src', '');
+})
+  </script>
+<header>
+  <div class="logo">ThinkPaP</div>
+  <div class="Items f-l">
+    <div class="s-btn">
+      <ul id="tm">
+        <li onclick="PaPtabs(this, 0);"><a class="btn btn_32 btn-azure"><i class="fa fa-file-text"></i><em>一类导航</em></a></li>
+        <li onclick="PaPtabs(this, 1);"><a class="btn btn_32 btn-azure"><i class="fa fa-shopping-bag"></i><em>二类导航</em></a></li>
+        <a class="btn btn_32 btn-azure" id="nofoot"><i class="fa fa-cog"></i><em>无底部版</em></a>
+        <a class="btn btn_32 btn-azure" id="hasfoot"><i class="fa fa-cog"></i><em>有底部版</em></a>
+        <a class="btn btn_32 btn-azure" id="noctrl"><i class="fa fa-cog"></i><em>无控制</em></a>
+        <a class="btn btn_32 btn-azure" id="hasctrl"><i class="fa fa-cog"></i><em>有控制</em></a>
+      </ul>
+    </div>
+  </div>
+  <div class="f-r">
+    <div class="r-i">
+      <div class="btn btn_44 ico accont-btn btn-azure" data-toggle="dropdown"><i class="fa fa-warning f16"></i></div>
+      <div class="drop mw300 border-n right shadow10">
+        <table class="bordered table-line">
+          <tbody>
+          <tr class="border-b2 border-orange">
+            <td colspan="3"><span class="btn btn_22 e-btn"><i class="fa fa-calendar f14 danger"></i> <em>今日代办事宜</em></span></td>
+          </tr>
+          <tr>
+            <td class="w5"><span class="btn btn_34 btn-azure ico o"><i class="fa fa-phone"></i></span></td>
+            <td class="v-t">合肥工业大学应用物理学院<br/><span class="gray f12">This is a professtional</span></td>
+            <td class="w5 v-t txt-r"><span class="btn btn_22 ico f-r"><i class="fa fa-phone azure"></i></span><br/><span class="gray f12">10:00</span></td>
+          </tr>
+          <tr>
+            <td class="w5"><span class="btn btn_34 btn-orange ico o"><i class="fa fa-phone"></i></span></td>
+            <td class="v-t">合肥工业大学应用物理学院<br/><span class="gray f12">This is a professtional</span></td>
+            <td class="w5 v-t txt-r"><span class="btn btn_22 ico f-r"><i class="fa fa-phone orange"></i></span><br/><span class="gray f12">10:00</span></td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="btn btn_32 btn-azure w-xs-12 txt-l"><em class="f12">2017年12月12日 星期三</em><em class="f-r f12">10°C </em></div>
+      </div>
+    </div>
+    <div class="s-btn">
+      <div class="btn btn_44 ico accont-btn wave in" data-toggle="dropdown"><i class="fa fa-envelope white f16"></i><span class="badge">3</span></div>
+    </div>
+    <div class="s-btn">
+      <div class="btn btn_44 ico accont-btn wave in" data-toggle="dropdown"><i class="fa fa-tasks white f16"></i><span class="badge">3</span></div>
+    </div>
+    <div class="s-btn">
+      <div class="btn btn_44 ico accont-btn" data-toggle="dropdown"><i class="fa fa-comment white f16"></i></div>
+    </div>
+    <div class="s-btn btn-azure">
+      <div class="btn btn_44 ico"><img src="../../models-assets/Think-images/a.jpg" class="w30 mt5" style="height: 30px"/></div>
+      <div class="btn btn_44 pln" data-toggle="dropdown"><em class="f15">飞扬科技</em></div>
+    </div>
+  </div>
+</header>
+
+
+<aside id="sidebar" class="msenu-compact">
+  <ul class="sidebar-menu" id="tmC0">
+    <li><a href="#"><i class="menu-icon fa fa-home"></i><span class="menu-text">Think UI Frame</span></a></li>
+    <li><a href="#"><i class="menu-icon fa fa-weibo"></i><span class="menu-text">一级导航 <span class="badge bg-orange">4</span></span></a></li>
+    <li class="open active"><a href="#" class="menu-dropdown"><i class="menu-icon fa fa-tasks"></i><span class="menu-text item">二级导航</span><i class="fa fa-angle-right menu-expand"></i></a>
+      <ul class="submenu">
+        <li><a href="#"><span class="menu-text">二级导航</span></a></li>
+      </ul>
+    </li>
+    <li class="open"><a href="#" class="menu-dropdown"><i class="menu-icon fa fa-sitemap"></i><span class="menu-text">三级导航 </span><i class="fa fa-angle-right menu-expand"></i></a>
+      <ul class="submenu">
+        <li class="open"><a href="#" class="menu-dropdown"><span class="menu-text">二级导航</span><i class="fa fa-angle-right menu-expand"></i></a>
+          <ul class="submenu">
+            <li><a href="#" class="menu-dropdown"><span class="menu-text">三级导航</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="open"><a href="#" class="menu-dropdown"><i class="menu-icon fa fa-desktop"></i><span class="menu-text">四级导航 </span><i class="fa fa-angle-right menu-expand"></i></a>
+      <ul class="submenu">
+        <li class="open active"><a href="#" class="menu-dropdown"><i class="menu-icon fa fa-tasks"></i><span class="menu-text">二级导航</span><i class="fa fa-angle-right menu-expand"></i></a>
+          <ul class="submenu">
+            <li><a href="#" target="adminbox"><span class="menu-text">三级导航</span></a></li>
+            <li class="active"><a href="#" target="adminbox"><span class="menu-text">三级导航</span></a></li>
+            <li class="open"><a href="#" class="menu-dropdown"><i class="menu-icon fa fa-tasks"></i><span class="menu-text">三级导航</span><i class="fa fa-angle-right menu-expand"></i></a>
+              <ul class="submenu">
+                <li><a href="#" target="adminbox"><span class="menu-text">四级导航</span></a></li>
+                <li><a href="#" target="adminbox"><i class="menu-icon fa fa-tasks"></i><span class="menu-text">四级导航</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="sidebar-menu none" id="tmC1">2222222</ul>
+</aside>
+
+
+<section>
+  <div class="sections">
+    <nav class="bread">
+      <div class="nav">当前位置：飞扬网站后台管理系统 > 后台首页</div>
+      <div class="buttons">
+        <a class="border-blue" id="fullscreen-toggler" href="javascript:()" title="全屏显示"><i class="fa fa-arrows blue"></i></a>
+        <a class="border-orange sidebar-toggler" href="javascript:()" title="影藏/显示左侧导航"><i class="fa fa-arrows-h orange"></i></a>
+        <a class="border-blue" id="sidebar-collapse" href="javascript:()" title="缩小/放大左侧导航"><i class="fa fa-navicon blue"></i></a>
+        <a class="border-blue" id="refresh-toggler" href="#" title="刷新本页"><i class="fa fa-refresh blue"></i></a>
+        <a class="border-success" href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-history success"></i></a>
+      </div>
+    </nav>
+    <div class="sectionpage width-sub">
+      <iframe src="" name="adminbox" class="frame" ID="adminbox" scrolling="auto" marginwidth="0" marginheight="0"></iframe>
+    </div>
+    <div class="ctrol txt-r">
+      <a class="btn btn_22 btn-orange mr5"><i class="fa fa-save"></i><em>确定保存</em></a>
+      <a class="btn btn_22 btn-blue mr5"><i class="fa fa-arrow-circle-left"></i><em>取消返回</em></a>
+      <a class="btn btn_22 btn-blue mr5"><i class="fa fa-trash-o"></i><em>删除信息</em></a>
+      <a class="btn btn_22 btn-blue"><i class="fa fa-arrow-circle-left"></i><em>帮助中心</em></a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <span href="/" class="btn btn-azure btn_30"><em>快速通道：</em>
+   </span><a href="/" class="btn btn-azure btn_30"><em>管理首页</em></a><a href="/" class="btn btn-azure btn_30"><em>模型管理</em></a><a href="/" class="btn btn-azure btn_30"><em>发布管理</em></a>
+  <span class="btn btn-azure btn_30 f-r"><em>CopyRight &copy; HFUT ThinkPaP Micro-Nanometer Material Research Laboratory</em></span>
+</footer>
+
+<script>
+function InitiateSideMenu(){$(".sidebar-toggler").on("click",function(){return $("#sidebar").toggleClass("hide"),$(".sidebar-toggler").toggleClass("active"),!1});var n=$("#sidebar").hasClass("menu-compact");$("#sidebar-collapse").on("click",function(){$("#sidebar").is(":visible")||$("#sidebar").toggleClass("hide");$("#sidebar").toggleClass("menu-compact");$(".sidebar-collapse").toggleClass("active");n=$("#sidebar").hasClass("menu-compact");n&&$(".open > .submenu").removeClass("open")});$(".sidebar-menu").on("click",function(t){var i=$(t.target).closest("a"),u,r,f;if(i&&i.length!=0){if(!i.hasClass("menu-dropdown"))return n&&i.get(0).parentNode.parentNode==this&&(u=i.find(".menu-text").get(0),t.target!=u&&!$.contains(u,t.target))?!1:void 0;if(r=i.next().get(0),!$(r).is(":visible")){if(f=$(r.parentNode).closest("ul"),n&&f.hasClass("sidebar-menu"))return;f.find("> .open > .submenu").each(function(){this==r||$(this.parentNode).hasClass("active")||$(this).slideUp(200).parent().removeClass("open")})}return n&&$(r.parentNode.parentNode).hasClass("sidebar-menu")?!1:($(r).slideToggle(200).parent().toggleClass("open"),!1)}})}InitiateSideMenu();$("#fullscreen-toggler").on("click",function(){var n=document.documentElement;$("body").hasClass("full-screen")?($("body").removeClass("full-screen"),$("#fullscreen-toggler").removeClass("active"),document.exitFullscreen?document.exitFullscreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitExitFullscreen&&document.webkitExitFullscreen()):($("body").addClass("full-screen"),$("#fullscreen-toggler").addClass("active"),n.requestFullscreen?n.requestFullscreen():n.mozRequestFullScreen?n.mozRequestFullScreen():n.webkitRequestFullscreen?n.webkitRequestFullscreen():n.msRequestFullscreen&&n.msRequestFullscreen())});
+</script>
+
+
+<script>
+  $("#nofoot").click(function () { $("footer").addClass("none"); $("aside").addClass("no-footer"); $("section").addClass("no-footer"); });
+  $("#hasfoot").click(function () { $("footer").removeClass("none"); $("aside").removeClass("no-footer"); $("section").removeClass("no-footer"); });
+  $("#noctrl").click(function () { $(".ctrol").addClass("none"); $("sectionpage").removeClass("width-sub");});
+  $("#hasctrl").click(function () { $(".ctrol").removeClass("none"); $("aside").addClass("width-sub");});
+</script>
+
+</body>
+</html>

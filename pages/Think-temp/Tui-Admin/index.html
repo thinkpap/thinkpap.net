@@ -1,0 +1,72 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script>var linoaa=101;linoba=1;linoca=0;linoda=0;</script>
+<link href="../../thinkui/ThinkPlus/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="../../thinkui/ThinkUi/css/Tui-basic.css" rel="stylesheet" />
+<link href="../../thinkui/ThinkUi/css/Tui.css" rel="stylesheet" />
+<link href="../../thinkui/Thinkmodel/manage-frame/style.css" rel="stylesheet" />
+<script src="../../thinkui/Thinkmodel/manage-frame/frame-load.js"></script>
+<script src="../../thinkui/ThinkPlus/jquery/jquery-2.1.4.js"></script>
+<script src="../../thinkui/ThinkUi/js/css.js"></script>
+<script src="../../thinkui/ThinkUi/js/commons.js"></script>
+<script src="../../thinkui/Thinkmodel/Tui-Admin/leftmenu.js"></script>
+</head>
+<body>
+<script>
+$(function(){
+  $('.frame').attr('src', 'system.html');
+})
+</script>
+<header>
+  <div class="logo">Think Admin</div>
+  <div class="Items fl">
+    <div class="s-btn">
+      <ul id="tm" class="fl">
+        <li onclick="PaPtabs(this,0);"><a class="btn btn-azure"><i class="fa fa-file-text"></i> <em>内容管理</em></a></li>
+        <li onclick="PaPtabs(this,1);"><a class="btn btn-azure"><i class="fa fa-shopping-bag"></i> <em>商城管理</em></a></li>
+        <li onclick="PaPtabs(this,2);"><a class="btn btn-azure"><i class="fa fa-cubes"></i> <em>模型管理</em></a></li>
+        <li onclick="PaPtabs(this,3);"><a class="btn btn-azure"><i class="fa fa-server"></i> <em>应用管理</em></a></li>
+        <li onclick="PaPtabs(this,4);"><a class="btn btn-azure"><i class="fa fa-tags"></i> <em>标签管理</em></a></li>
+        <li onclick="PaPtabs(this,5);"><a class="btn btn-azure"><i class="fa fa-user"></i> <em>用户管理</em></a></li>
+        <li onclick="PaPtabs(this,6);"><a class="btn btn-azure"><i class="fa fa-gear"></i> <em>系统设置</em></a></li>
+      </ul>
+    </div>
+  </div>
+
+</header>
+
+<aside id="sidebar"><script>leftmenu();</script></aside>
+
+<section>
+  <div class="sections">
+    <nav class="bread">
+      <div class="nav">当前位置：飞扬网站后台管理系统 > 后台首页</div>
+      <div class="buttons">
+        <a class='border-b2 border-blue' id="fullscreen-toggler" href='javascript:()' title='全屏显示'><i class='fa fa-arrows blue'></i></a>
+        <a class='border-b2 border-orange sidebar-toggler' href='javascript:()' title='影藏/显示左侧导航'><i class='fa fa-arrows-h orange'></i></a>
+        <a class='border-b2 border-blue' id='sidebar-collapse' href='javascript:()' title='缩小/放大左侧导航'><i class='fa fa-navicon blue'></i></a>
+        <a class='border-b2 border-blue' id='refresh-toggler' href='#' title='刷新本页'><i class='fa fa-refresh blue'></i></a>
+        <a class='border-b2 border-success' href='javascript:history.back(-1)' title='返回上一页'><i class='fa fa-history success'></i></a>
+      </div>
+    </nav>
+    <div class="page"><iframe src="" name="adminbox" class="frame" ID="adminbox" scrolling="auto" marginwidth="0" marginheight="0"></iframe></div>
+  </div>
+</section>
+
+<footer>
+  <span href="/" class="btn btn-azure btn-30"><em>快速通道：</em></span>
+  <a href="/" class="btn btn-azure btn-30"><em>管理首页</em></a>
+  <a href="/" class="btn btn-azure btn-30"><em>模型管理</em></a>
+  <a href="/" class="btn btn-azure btn-30"><em>发布管理</em></a>
+  <a href="/" class="btn btn-azure btn-30"><em>模版管理</em></a>
+  <span class="btn btn-azure btn-30 fr"><em>CopyRight &copy; HFUT ThinkPaP Micro-Nanometer Material Research Laboratory</em></span>
+</footer>
+
+
+  <script src="../../thinkui/Thinkmodel/manage-frame/frame-end.js"></script>
+</body>
+</html>

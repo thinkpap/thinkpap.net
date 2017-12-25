@@ -1,0 +1,200 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+
+<div class="rows headertab">
+  <ul id="tm">
+      <li onclick="PaPtabs(this,0);" class="pactive"><a class="btn btn-default"><i class="fa fa-paste"></i><em>基本信息</em>
+      </a></li><li onclick="PaPtabs(this,1);"><a class="btn btn-default"><i class="fa fa-files-o"></i><em>模板绑定</em>
+      </a></li><li onclick="PaPtabs(this,2);"><a class="btn btn-default"><i class="fa fa-recycle"></i><em>防注册机</em>
+      </a></li><li onclick="PaPtabs(this,3);"><a class="btn btn-default"><i class="fa fa-user"></i><em>会员选项</em>
+      </a></li><li onclick="PaPtabs(this,4);"><a class="btn btn-default"><i class="fa fa-envelope"></i><em>邮件选项</em>
+      </a></li><li onclick="PaPtabs(this,5);"><a class="btn btn-default"><i class="fa fa-file-photo-o"></i><em>缩略图水印</em>
+      </a></li><li onclick="PaPtabs(this,6);"><a class="btn btn-default"><i class="fa fa-columns"></i><em>其它选项</em>
+      </a></li><li onclick="PaPtabs(this,7);"><a class="btn btn-default"><i class="fa fa-commenting"></i><em>短信平台</em>
+      </a></li><li onclick="PaPtabs(this,8);"><a class="btn btn-default"><i class="fa fa-mobile"></i><em>手机端配置</em></a></li>
+  </ul>
+</div>
+
+<form class="form">
+
+  <section class="t_line" id="tmC0">
+    <dl><dt>网站名称：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>网站标题：</dt><dd><input class="inp" name="" type='text' value='' datatype="*" nullmsg="请填写网站标题"></dd></dl>
+    <dl><dt>网站地址：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>安装目录：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl>
+      <dt>网站首页：</dt>
+      <dd>
+        <span class="ico-inp ico-r s">
+          <select class="inp">
+            <option value='' selected>- 首页文件名 -</option>
+            <option value=''>index.asp</option>
+            <option value=''>index.html</option>
+            <option value=''>index.shtml</option>
+            <option value=''>default.html</option>
+            <option value=''>default.shtml</option>
+          </select><i class="fa fa-angle-down"></i>
+        </span>
+      </dd>
+    </dl>
+    <dl><dt>关 键 字：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>网站描述：</dt><dd><span class="ico-inp ico-r w700"><textarea rows="6"></textarea><i class="fa fa-file purple"></i></span></dd></dl>
+  </section>
+
+  <section class="t_line none" id="tmC1">
+    <script>
+      
+      var systemplt = "";
+      for (var i = 0 ;i < 15 ;i++) {
+        systemplt += "<dl><dt>首页模版" + i + "：</dt><dd><input class=\'inp w450\' name=\'\' type=\'text\' value=\'\'><button class=\'btn btn-blue\'><em>选择模板</em></button></dd></dl>";
+      };
+      document.write(systemplt);
+    </script>
+  </section>
+
+  <section class="t_line none" id="tmC2">
+    <dl><dt>启用页面：</dt><dd><div class="cka def"><label><input name="" type="checkbox"><span>首页</span></label><label><input name="" type="checkbox"><span>会员中心</span></label></div></dd></dl>
+ </section>
+
+  <section class="t_line none" id="tmC3">
+    <dl><dt>开放注册：</dt><dd><div class="cka def"><label><input name="" type="checkbox"><span>允许注册</span></label><label><input name="" type="checkbox"><span>禁止注册</span></label></div></dd></dl>
+  </section>
+
+  <section class="t_line none" id="tmC4">
+    
+    <dl><dt>显示信箱：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>SMTP：</dt><dd><input class="inp" name="" type='text' value=''> </dd></dl>
+    <dl><dt>SMTP用户：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>SMTP密码：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+  </section>
+
+  <section class="t_line none" id="tmC5">
+    <div class="linetitle">生成缩略图组件</div>
+    <dl>
+      <dt>略图组件：</dt>
+      <dd><span class="ico-inp ico-r s w400"><select class="inp"><option value='' selected>- 生成缩略图组件 -</option><option value=0>关闭 </option><option value=1>AspJpeg组件 ×不支持</option><option value=2>wsImage组件 ×不支持</option><option value=3>SA-ImgWriter组件 ×不支持</option></select><i class="fa fa-angle-down"></i></span></dd>
+    </dl>
+    <dl><dt>生成方式：</dt><dd><div class="cka"><div class="mr15 fl"><label><input name="" type="radio"><span>按比例</span></label></div><div class="mr15 fl"><label><input name="" type="radio"><span>按大小</span></label></div></div></dd></dl>
+    <dl>
+      <dt>缩放比例：</dt><dd class="w80"><input class="inp" name="" type='text' value=''></dd>
+      <dt>黄金分割点：</dt><dd class="w80"><input class="inp" name="" type='text' value=''></dd>
+      <dt>缩略图宽度：</dt><dd class="w80"><input class="inp" name="" type='text' value=''></dd>
+      <dt>缩略图高度：</dt><dd class="w80"><input class="inp" name="" type='text' value=''></dd>
+    </dl>
+    <div class="linetitle mt15">水印组件</div>
+    <dl><dt>略图组件：</dt><dd><span class="ico-inp ico-r s w400"><select class="inp"><option value='' selected>- 生成缩略图组件 -</option><option value=0>关闭 </option><option value=1>AspJpeg组件 ×不支持</option><option value=2>wsImage组件 ×不支持</option><option value=3>SA-ImgWriter组件 ×不支持</option></select><i class="fa fa-angle-down"></i></span></dd>
+</dl>
+    <dl><dt>水印类型：</dt><dd><div class="cka def"><label><input name="" type="radio"><span>文字模式</span></label><label><input name="" type="radio"><span>图片类型</span></label></div></dd></dl>
+    <dl><dt>水印文字：</dt><dd><input class="inp w400" name="" type='text' value=''></dd></dl>
+    <dl>
+      <dt>字体大小：</dt>
+      <dd class="w80"><input class="inp w80" name="" type='text' value=''></dd>
+      <dt>字体名称：</dt>
+      <dd class="w120">
+        <span class="ico-inp ico-r s"><select class="inp"><option value='' selected>- 字体 -</option><option value="宋体">宋体</option><option value="楷体">楷体</option><option value="新宋体">新宋体</option><option value="黑体" selected>黑体</option><option value="隶书">隶书</option><OPTION value="Andale Mono">Andale Mono</OPTION><OPTION value="Arial">Arial</OPTION><OPTION value="Arial Black">Arial Black</OPTION><OPTION value="Book Antiqua">Book Antiqua</OPTION><OPTION value="Century Gothic">Century Gothic</OPTION><OPTION value="Comic Sans MS">Comic Sans MS</OPTION><OPTION value="Courier New">Courier New</OPTION><OPTION value="Georgia">Georgia</OPTION><OPTION value="Impact">Impact</OPTION><OPTION value="Tahoma">Tahoma</OPTION><OPTION value="Times New Roman">Times New Roman</OPTION><OPTION value="Trebuchet MS">Trebuchet MS</OPTION><OPTION value="Script MT Bold">Script MT Bold</OPTION><OPTION value="Stencil">Stencil</OPTION><OPTION value="Verdana">Verdana</OPTION><OPTION value="Lucida Console">Lucida Console</OPTION> </select><i class="fa fa-angle-down"></i></span>
+</dd>
+      <dt>是否加粗：</dt><dd class="w80"><div class="cka def"><label><input name="" type="radio"><span>是</span></label><label><input name="" type="radio"><span>否</span></label></div></dd>
+      <dt>字体颜色：</dt><dd class="w80"><input class="inp w80" name="" type='text' value=''></dd>
+    </dl>
+    <dl><dt>LOGO图片：</dt><dd><input class="inp w400" name="" type='text' value=''><button class="btn btn-blue"><em>选择模板</em></button></dd></dl>
+    <dl>
+      <dt>透明度：</dt><dd class="w80"><input class="inp" name="" type='text' value=''></dd>
+      <dt>坐标位置X：</dt><dd class="w80"><input class="inp" name="" type='text' value=''></dd>
+      <dt>坐标位置Y：</dt><dd class="w80"><input class="inp" name="" type='text' value=''></dd>
+      <dt>除底色：</dt><dd class="w80"><input class="inp" name="" type='text' value=''></dd>
+    </dl>
+
+    <dl>
+      <dt>坐标起点位置：</dt>
+      <dd>
+        <div class="cka def">
+          <label><input name="" type="radio"><span>左上</span></label>
+          <label><input name="" type="radio"><span>左下</span></label>
+          <label><input name="" type="radio"><span>居中</span></label>
+          <label><input name="" type="radio"><span>右上</span></label>
+          <label><input name="" type="radio"><span>右下</span></label>
+        </div>
+      </dd>
+    </dl>
+  </section>
+
+  <section class="t_line none" id="tmC6">
+    <dl><dt>后台目录：</dt><dd><input class="inp" name="" type='text' value=''>  </dd></dl>
+    <dl><dt>模板目录：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>上传目录：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl>
+      <dt>上传格式：</dt>
+      <dd>
+        <div class="cka def">
+          <label><input type="checkbox"><span>upfiles/年/</span></label>
+          <label><input type="checkbox"><span>upfiles/年/月/</span></label>
+          <label><input type="checkbox"><span>upfiles/年/月/日/</span></label>
+        </div>
+      </dd>
+    </dl>
+    <dl><dt>专题目录：</dt><dd><input class="inp" name="" type='text' value=''> </dd><dd>后面必须带"/"符号</dd></dl>
+  </section>
+
+  <section class="t_line none" id="tmC7">
+    <dl>
+      <dt>是否启用：</dt><dd>
+        <div class="cka def">
+          <label><input type="checkbox"><span>index</span></label>
+          <label><input type="checkbox"><span>default</span></label>
+        </div>
+      </dd>
+    </dl>
+    <dl><dt>平台账号：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>平台密码：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>接口地址：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>返回标志：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl>
+      <dt>接口编码：</dt>
+      <dd>
+        <div class="cka def">
+          <label><input name="" type="radio" checked><span>GB2312</span></label>
+          <label><input name="" type="radio"><span>UTF-8</span></label>
+        </div>
+      </dd>
+    </dl>
+
+    <dl>
+      <dt>加密方式：</dt><dd>
+        <div class="cka def">
+          <label><input name="" type="radio" checked><span>无需加密</span></label>
+          <label><input name="" type="radio"><span>MD5(16)</span></label>
+          <label><input name="" type="radio"><span>MD5(32)</span></label>
+        </div>
+      </dd>
+    </dl>
+  </section>
+
+  <section class="t_line none" id="tmC8">
+    <dl><dt>是否启用：</dt><dd><div class="cka"><div class="mr15 fl"><label><input name="" type="radio" checked><span>启用</span></label></div><div class="mr15 fl"><label><input name="" type="radio"><span>关闭</span></label></div></div></dd></dl>
+    <dl><dt>绑定域名：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>生成路径：</dt><dd><input class="inp" name="" type='text' value=''></dd></dl>
+    <dl><dt>扩 展 名：</dt><dd><span class="ico-inp ico-r s"><select class="inp"><option value=''>- 扩展名 -</option><option value=''>.html</option><option value=''>.shtml</option></select><i class="fa fa-angle-down"></i></span></dd></dl>
+  </section>
+
+
+
+  <div class="ctrol">
+    <a class="btn btn_22 btn-blue fr"><i class="fa fa-arrow-circle-left"></i><em>帮助中心</em></a>
+    <a class="btn btn_22 btn-blue mr5 fr"><i class="fa fa-trash-o"></i><em>删除信息</em></a>
+    <a class="btn btn_22 btn-blue mr5 fr"><i class="fa fa-arrow-circle-left"></i><em>取消返回</em></a>
+    <button type="submit" id="submit" class="btn btn_22 btn-orange mr5 fr"><i class="fa fa-save"></i><em>确定保存</em></button>
+  </div>
+
+</form>
+
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageend.js"></script>
+
+</body>
+</html>

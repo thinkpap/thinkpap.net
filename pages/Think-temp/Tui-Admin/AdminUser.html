@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Think-exp/Admin-Page-load.js"></script>
+<style>
+  .border {
+      position: relative;
+  }
+
+  .border:before {
+      content: "";/* 注意这里为双引号 */
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      border: 1px solid #ff0000;
+top:0; left:0;
+      border-radius:5px;/* 也可以设置圆角 */
+      -webkit-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      -o-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scale(0.5, 0.5);
+      -ms-transform: scale(0.5, 0.5);
+      -o-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+</style>
+
+
+</head>
+<body class="admin-FootPd">
+<a class="btn btn-30 btn-bh-pink border">你好吃那</a>
+<header class="tui-frame-ToolBar">
+  <div class="Line mb15">
+    <div class="btn-group"><a class="btn btn-whitesmoke"><i class="fa fa-plus azure"></i> 添加管理员
+    </a><a class="btn btn-whitesmoke"><i class="fa fa-times azure"></i> 角色管理
+    </a><a class="btn btn-whitesmoke"><i class="fa fa-sign-out azure"></i> 添加角色</a>
+    </div>
+    <select class="select w100 fr" name='id'><option value=''>按照模型</option><option value='20115756199176'>文章系统</option><option value='20115756199176'>图片系统</option></select>
+    <a class="btn btn-whitesmoke fr mr5"><i class="fa fa-sort-amount-desc azure"></i> 全部展开</a>
+  </div>
+</header>
+
+
+
+<section class="tui-frame-section">
+  <table class="table table-border-line hover txt-c table-vm table-sm mt15">
+    <thead><tr class="strong"><th width=30><div class="checka"><label><input name='select' type="checkbox" onclick="if (this.checked){Select(0)}else{Select(2)}"><span class="text"></span></label></div></th>
+    <th class="tl pl10" width="10%">管理员</th><th width="10%">类型</th><th width="10%">最后登录IP</th><th width="13%">最后登录时间</th><th width="13%">最后登出时间</th><th width="6%">登陆次数</th><th width="6%">状态</th><th>管理操作</th></tr></thead>
+    <tbody>
+<script>var input="";for(var i=0;i<15;i++){input+="<tr id='u"+i+"' onclick=chk_idiv('"+i+"')><td><div class='checka'><label><input name='id' type='checkbox' id='c"+i+"' value='"+i+"'><span class='text'></span></label></div></td><td class='tl'>"+i+"Thinkpap</td><td>超级管理员</td><td>127.0.0.1</td><td>2016.2.3 12：03：03</td><td>2016.2.3 12：03：03</td><td>123</td><td>正常</td><td>修改 | 删除 | 设置密码</td></tr>"};document.write(input);</script>
+ </tbody>
+  </table>
+</section>
+<div class="admin_Cave">
+  <ul class="pagination fr"><a href="#" class="count">上一页</a><a href="#" class="curr">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#" class="count">下一页</a><a href="#" class="count">共1234页</a></ul><br>
+</div>
+
+</body>
+</html>

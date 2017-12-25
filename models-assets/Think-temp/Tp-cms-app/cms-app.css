@@ -1,0 +1,18 @@
+﻿@charset "utf-8";
+
+.app-downa:after{content:"";display:block;height:0;clear:both;visibility:hidden}
+.art_copy{padding-top:10px;padding-bottom:20px;margin-top:20px;line-height:22px;text-align:center;font-family:'宋体';border-top:1px solid #dedede;font-size:12px;color:#666666}.art_copy a{color:#666666}
+
+.tip-app-drop{width: 400px}
+.app-downa{width:100%; padding: 0.05rem 0 0.05rem 0.05rem}.app-downa .btn{float: left; width: 25%}
+.app-downa .btn,.app-downa .btn i,.app-downa .btn em{background:transparent!important}
+/*用户资料*/
+.app-face img{width:0.65rem;height:0.65rem}
+.app-name{line-height:0.30rem;font-size:0.16rem;padding-left:0.15rem}
+.app-ename{line-height:0.20rem;font-size:0.13rem;color:#999999;padding-left:0.15rem}
+
+@media(max-width:767px) {
+.tip-app-drop{width:100%;position: fixed;top:40px; right:0; left: 0; bottom: auto;border-bottom:0.01rem solid #e8e8e8;background:#edfbfe}
+/*底部菜单*/
+.art_copy{padding-left:15px;padding-right:15px}
+}

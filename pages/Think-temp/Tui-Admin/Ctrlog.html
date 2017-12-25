@@ -1,0 +1,55 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+<header class="tui-frame-ToolBar">
+    <div class="s-btn">
+      <a class="btn btn-default"><i class="fa fa-trash"></i><em>删除全部</em>
+      </a><a class="btn btn-default"><i class="fa fa-trash"></i><em>删除选中</em>
+      </a><a class="btn btn-default"><i class="fa fa-cog"></i><em>倒序查看</em>
+      </a><a class="btn btn-default"><i class="fa fa-file-excel-o"></i><em>导出到Excel</em></a>
+    </div>
+</header>
+<section>
+
+  <table class="table-md table-border table-line hover-blue txt-c">
+    <thead>
+      <tr>
+        <th width='30'>选择</th>
+        <th width='30'>ID</th>
+        <th width='150'>操作员</th>
+        <th width='150'>登录IP</th>
+        <th width='150'>登录时间</th>
+        <th>登录备注</th>
+        <th width='50' class="tr">删除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <script>
+        var rwrire = "";
+        for (var i = 0; i < 25; i++) {
+          rwrire += "<tr>";
+          rwrire += "<td><div class='cka'><label><input name='moren' type='checkbox'><span class='text'></span></label></div></td>";
+          rwrire += "<td>" + i + "</td>";
+          rwrire += "<td>thinkpap</td>";
+          rwrire += "<td>127.0.0.1</td>";
+          rwrire += "<td>20170505</td>";
+          rwrire += "<td class='txt-l'>登陆后台</td>";
+          rwrire += "<td class='line-1'><a class='btn btn_22 btn-orange'><i class='fa fa-plus'></i><span class='ct'>删除</span></a></td>";
+          rwrire += "</tr>";
+        }
+        document.write(rwrire);
+      </script>
+    </tbody>
+  </table>
+
+
+
+</section>
+</body>
+</html>

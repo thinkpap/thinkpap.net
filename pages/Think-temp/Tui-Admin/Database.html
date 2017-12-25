@@ -1,0 +1,84 @@
+﻿<!doctype html><html lang="zh-cn"><head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+  <header class="rows headertab">
+    <ul id="tm">
+      <li onclick="PaPtabs(this,0);" class="pactive"><a class="btn btn-default"><i class="fa fa-paste azure"></i> <em>备份数据库</em>
+      </a></li><li onclick="PaPtabs(this,1);"><a class="btn btn-default"><i class="fa fa-files-o azure"></i> <em>数据库表</em></a></li>
+    </ul>
+</header>
+
+  <section id="tmC0">
+    <table>
+      <tr>
+        <td width="50" class="tl">数据库名称：</td>
+        <td width="250"><input class="inp w300" id="" name="" type='text' value=''></td>
+        <td width="50" class="tr">备份名称：</td>
+        <td width="250"><input class="inp w300" id="" name="" type='text' value=''></td>
+        <td class="tl"><button class="btn btn-blue"><i class="fa fa-database"></i><em>备份数据库</em></button></td>
+      </tr>
+    </table>
+
+    <table class="table-vm mt10">
+      <thead>
+        <tr>
+          <th width='70'>序号</th>
+          <th width='170'>备份文件名</th>
+          <th width='100'>大小</th>
+          <th>备份时间</th>
+          <th width='40'>删除</th>
+        </tr>
+      </thead>
+      <tbody class="striped">
+        <script>
+        var databaseback = "";
+      for(var i=0;i<13;i++) {
+       databaseback+="<tr>" ;
+       databaseback += "<td class='txt-c'>" + i + "</td>";
+       databaseback += "<td>20170505.bak</td>";
+       databaseback += "<td>21.66MB</td>";
+       databaseback += "<td>20170505</td>";
+       databaseback += "<td class='line-1'><a class='btn btn-orange btn_22 delete'><i class='fa fa-trash f14'></i><em>删除</em></td>";
+       databaseback += "</tr>";
+    }
+      document.write(databaseback);
+        </script>
+
+      </tbody>
+    </table>
+  </section>
+
+  <section class="none" id="tmC1">
+    <table class="table-sm">
+      <thead>
+        <tr>
+          <th width='70'><strong>序号</strong></th>
+          <th width='150'><strong>数据表名</strong></th>
+          <th><strong>数据量</strong></th>
+          <th width='40'><strong>删除</strong></th>
+        </tr>
+      </thead>
+      <tbody class="striped">
+        <script>
+        var datafield = "";
+      for(var i=0;i<50;i++) {
+        datafield += "<tr>";
+        datafield += "<td class='txt-c'>" + i + "</td>";
+        datafield += "<td>TP_Table"+i+"</td>";
+        datafield += "<td>" + (Math.floor(Math.random() * 9999) + 1234) + "条</td>";
+        datafield += "<td class='line-1'><a class='btn btn-success btn_22 delete'><i class='fa fa-eye f14'></i><em>查看</em></td>";
+        datafield += "</tr>";
+    }
+      document.write(datafield);
+        </script>
+
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+  <header class="rows headertab">
+  <div class="fl">
+    <ul id="tm">
+      <li onclick="PaPtabs(this,0);" class="pactive"><a class="btn btn-default"><i class="fa fa-paste azure"></i> <em>系统模型</em>
+      </a></li><li onclick="PaPtabs(this,1);"><a class="btn btn-default"><i class="fa fa-files-o azure"></i> <em>应用管理</em>
+      </a></li><li onclick="PaPtabs(this,2);"><a class="btn btn-default"><i class="fa fa-recycle azure"></i> <em>功能开关</em></a></li>
+    </ul>
+  </div> 
+<div class="s-btn fr"><a class="btn btn-default"><i class="fa fa-plus azure"></i> <em>添加模型</em>
+    </a><a class="btn btn-default"><i class="fa fa-external-link azure"></i> <em>数据统计</em>
+    </a><a class="btn btn-default"><i class="fa fa-trash azure"></i> <em>模型导入&导出</em>
+    </a><a class="btn btn-default"><i class="fa fa-times azure"></i> <em>回上一级</em></a>
+    </div>
+</header>
+
+<section>
+  <div id="tmC0">
+    <table class="table-md table-border table-line hover-blue txt-c">
+      <thead>
+        <tr>
+          <th width='60'><strong>ID</strong></th>
+          <th width='60'><strong>状态</strong></th>
+          <th width='90'><strong>模型名称</strong></th>
+          <th width='120'><strong>数据表名</strong></th>
+          <th width='90'><strong>项目名称</strong></th>
+          <th width='90'><strong>项目单位</strong></th>
+          <th width='90'><strong>类型</strong></th>
+          <th><strong></strong></th>
+          <th width='70'><strong>克隆</strong></th>
+          <th width='70'><strong>删除</strong></th>
+          <th width='70'><strong>编辑</strong></th>
+          <th width='90'><strong>字段管理</strong></th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <script>
+          var modelout = "";
+          var key = {
+            1: '<a class="btn btn-success ico o btn_22"><i class="fa fa-check f14"></i></a>',
+            2: '<a class="btn btn-orange ico o btn_22 delete"><i class="fa fa-minus f14"></i></a>'
+          };
+          var kind = { 1: '<font class="red">系统</font>', 2: '自定义' };
+          var model = {
+            modelname: ["文章系统", "图片系统", "下载系统", "商城系统", "供求系统", "影视系统", "动画系统", "音乐系统", "招聘系统", "微信系统", "在线访谈", "论坛系统", "数字报纸"],
+            modelename: ["Article", "Pictures", "Download", "Eshop", "Supply", "Movies", "Flash", "Music", "Jobs", "Weichat", "Onlinechat", "Bbs", "Papers"],
+            modelcell: ["文章", "图片", "下载", "商品", "供求", "影片", "动画", "音乐", "招聘", "微信", "访谈", "论坛", "报纸"],
+            modelsname: ["篇", "幅", "个", "个", "篇", "个", "个", "首", "个", "篇", "次", "个", "篇"]
+          };
+          for (var i = 0; i < 13; i++) {
+            modelout += "<tr>";
+            modelout += "<td class='tc'>" + i + "</td>";
+            modelout += "<td class='line-1'>" + key[(Math.floor(Math.random() * 2) + 1)] + "</td>";
+            modelout += "<td>" + model.modelname[i] + "</td>";
+            modelout += "<td class='txt-l'>TP_" + model.modelename[i] + "</td>";
+            modelout += "<td>" + model.modelcell[i] + "</td>";
+            modelout += "<td>" + model.modelsname[i] + "</td>";
+            modelout += "<td>" + kind[(Math.floor(Math.random() * 2) + 1)] + "</td>";
+            modelout += "<td></td><td>克隆</td><td>编辑</td><td>字段管理</td>";
+            modelout += "<td class='line-1'><a class='btn btn-orange btn_22'><i class='fa fa-trash f14'></i><em>删除</em></td>";
+            modelout += "</tr>";
+          }
+          document.write(modelout);
+        </script>
+      </tbody>
+    </table>
+  </div>
+  <div class="none" id="tmC1">
+    <table class="table-md table-border table-line hover-blue txt-c">
+      <thead>
+        <tr>
+          <th width='60'><strong>ID</strong></th>
+          <th width='60'><strong>状态</strong></th>
+          <th width='90'><strong>应用名称</strong></th>
+          <th width='120'><strong>权限值</strong></th>
+          <th></th>
+          <th width='90'><strong>管理操作</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <script>
+          var pluslout = "";
+          var state = { 1: '<a class="btn btn_22 btn-success ico o"><i class="fa fa-check f14"></i></a>', 2: '<a class="btn btn_22 btn-orange ico o"><i class="fa fa-minus f14"></i></a>' };
+          var kind = { 1: '<font class="red">系统</font>', 2: '自定义' };
+          var plus = { "name": ["问答系统", "微社区系统", "空间系统", "留言系统", "友情链接", "公告系统", "投票调查", "PK管理", "自定义表单", "广告管理", "采集管理", "论坛系统", "数字报纸"] };
+          for (var i = 0; i < 13; i++) {
+            pluslout += "<tr>";
+            pluslout += "<td class='tc'>" + i + "</td>";
+            pluslout += "<td class='line-1'>" + state[(Math.floor(Math.random() * 2) + 1)] + "</td>";
+            pluslout += "<td>" + plus.name[i] + "</td>";
+            pluslout += "<td>sub" + i + "</td>";
+            pluslout += "<td></td>";
+            pluslout += "<td class='line-1'><a class='btn btn-orange btn_22 delete'><i class='fa fa-minus f14'></i><em>关闭</em></td>";
+            pluslout += "</tr>";
+          }
+          document.write(pluslout);
+        </script>
+      </tbody>
+    </table>
+  </div>
+  <div class="none" id="tmC2">
+    <script>
+      var switchout0 = ""; switchout1 = ""; switchout2 = "";
+      var switchs=[
+            {
+              chanelname: "商城模块", "switcells": [
+                                        { "name": "商品管理", "swcont": ["团购商品", "拼团商品", "一元云购"] },
+                                        { "name": "营销&促销", "swcont": ["限时/限量抢购", "竞价商品管理", "全场促销", "优惠券&红包", "预约码管理"] },
+                                        { "name": "相关工具", "swcont": ["商品批量设置", "库存预警管理", "商品批量编辑", "商品批量调价"] },
+                                        { "name": "功能配置", "swcont": ["商城系统配置", "消息模板配置", "商品栏目管理", "商品规格管理", "商品品牌管理","配送管理", "支付方式管理", "回收站管理"] }
+              ]
+            },
+            {
+              chanelname: "会员系统", "switcells": [
+                                        { "name": "会员管理", "swcont": ["用户管理", "添加新用户", "用户组/部门", "用户表单/字段"] },
+                                        { "name": "管理员", "swcont": ["管理员管理", "管理员工作计划"] },
+                                        { "name": "财务管理", "swcont": ["充值卡管理", "收费套餐包管理", "VIP购买配置", "在线充值记录管理", "消费明细管理"] },
+                                        { "name": "消息管理", "swcont": ["手机短信发送管理", "站内短消息管理", "发送邮件管理", "登录及绑定记录"] },
+                                        { "name": "签到管理", "swcont": ["参数设置管理", "签到记录管理"] }
+                                        ]
+            }
+      ];
+      for (var i = 0; i < switchs.length; i++) {
+        document.write('<div class="widget mt10 mb15 af">');
+        document.write('  <div class="widget-header"><span class="btn btn_22"><i class="fa fa-user"></i> <em>' + switchs[i].chanelname + '</em></span></div>');
+        document.write('  <div class="widget-body p15">');
+        for (var j = 0; j < switchs[i].switcells.length; j++) {
+          document.write('  <div class="rows border-l2 border-blue pl10"><div class="btn btn_22 btnk"><i class="fa fa-shopping-basket f14"></i><em>' + switchs[i].switcells[j].name + '</em></div></div>');
+          document.write('  <div class="rows mt10 mb10 pb10 border-b1 border-platinum">');
+          for (var k = 0; k < switchs[i].switcells[j].swcont.length; k++) {
+            document.write('<div class="cka w150"><label><input name="weixinreg" type="checkbox"><span>' + switchs[i].switcells[j].swcont[k] + '</span></label></div>');
+          }
+          document.write('  </div>');
+        }
+         document.write('  </div>');
+        document.write('</div>');
+      }
+
+    </script>
+
+  </div>
+
+</section>
+</body>
+</html>

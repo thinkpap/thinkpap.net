@@ -1,0 +1,69 @@
+﻿<!doctype html><html lang="zh-cn"><head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+  <header class="rows headertab">
+    <ul id="tm">
+      <li onclick="PaPtabs(this,0);" class="pactive"><a class="btn btn-default"><i class="fa fa-paste azure"></i> <em>字段替换</em>
+      </a></li><li onclick="PaPtabs(this,1);"><a class="btn btn-default"><i class="fa fa-files-o azure"></i> <em>附件地址</em></a></li>
+    </ul>
+</header>
+  <section class="tui-frame-Tabcont" id="tmC0">
+    <table>
+      <tr>
+        <td width="50" class="tr">数据表名称：</td>
+        <td>
+          <span class="ico-inp ico-r s w250"><select class="inp"><option value="选择表名">选择表名</option><script>for (i = 1; i < 20; i++) { document.write("<option>TP_Table" + i + "</option>") }</script></select><i class="fa fa-angle-down"></i></span>
+        </td>
+      </tr>
+      <tr>
+        <td width="50">数据表字段：</td>
+        <td class="tl"><span class="ico-inp ico-r s w250"><select class="inp"><option value="选择表名">选择字段名</option><script>for (i = 1; i < 20; i++) { document.write("<option>Filed" + i + "</option>") }</script>
+</select><i class="fa fa-angle-down"></i></span></td>
+      </tr>
+      <tr><td class="tr">区分大小写：</td><td><div class="cka def"><label><input type="radio" name="recommend"><span class="text">区分</span></label><label><input type="radio" name="video"><span class="text">不区分</span></label></div></td></tr>
+      <tr><td class="tr">替换模式：</td><td><div class="cka def"><label><input type="radio" name="recommend"><span class="text">简单模式</span></label><label><input type="radio" name="video"><span class="text">高级模式</span></label><label><input type="radio" name="video"><span class="text">赋值模式</span></label></div></td></tr>
+      <tr><td class="tr">SQL条件：</td><td><input class="inp w400" id="" name="" type='text' value=''></td></tr>
+      <tr><td class="tr">将 字 符：</td><td><input class="inp w400" id="" name="" type='text' value=''></td></tr>
+      <tr><td class="tr">替换成：</td><td><input class="inp w400" id="" name="" type='text' value=''></td></tr>
+      <tr><td class="tr"></td><td><a class="btn btn-blue"><i class="fa fa-arrow-circle-left"></i> <em>取消返回</em></a> <a class="btn btn-orange  ml10"><i class="fa fa-save"></i> <em>确定执行</em></a></td></tr>
+    </table>
+
+  </section>
+
+<section class="tui-frame-section">
+  <div class="tui-frame-Tabcont none" id="tmC1">
+    <table class="table-sm">
+      <thead>
+        <tr>
+          <th width='70'><strong>序号</strong></th>
+          <th width='150'><strong>数据表名</strong></th>
+          <th width='80'><strong>数据量</strong></th>
+          <th></th>
+          <th width='40'><strong>删除</strong></th>
+        </tr>
+      </thead>
+      <tbody class="striped">
+        <script>
+        var datafield = "";
+      for(var i=0;i<50;i++) {
+        datafield += "<tr>";
+        datafield += "<td>" + i + "</td>";
+        datafield += "<td class='tl'>TP_Table"+i+"</td>";
+        datafield += "<td class='tr'>" + (Math.floor(Math.random() * 9999) + 1234) + "条</td>";
+        datafield += "<td class='tl'></td>";
+        datafield += "<td><a class='btn btn-success btn_22 delete'><i class='fa fa-eye f14'></i><span class='ct'>查看</span></td>";
+        datafield += "</tr>";
+    }
+      document.write(datafield);
+        </script>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+</body>
+</html>

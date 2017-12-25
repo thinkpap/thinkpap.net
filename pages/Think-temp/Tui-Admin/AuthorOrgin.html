@@ -1,0 +1,182 @@
+﻿<!doctype html><html lang="zh-cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body class="">
+<header class="rows headertab">
+  <div class="fl">
+    <ul id="tm">
+      <li onclick="PaPtabs(this, 0);" class="pactive"><a class="btn btn-default"><i class="fa fa-paste azure"></i> <em>作者管理</em>
+      </a></li><li onclick="PaPtabs(this, 1);"><a class="btn btn-default"><i class="fa fa-files-o azure"></i> <em>来源管理</em>
+      </a></li><li onclick="PaPtabs(this, 2);"><a class="btn btn-default"><i class="fa fa-recycle azure"></i> <em>关键字管理</em></a></li>
+    </ul>
+  </div>
+  <div class="s-btn fr">
+    <a class="btn btnk-platinum" onclick="adddata('添加作者', '700px', '650px', 'AuthorOrginadd1.html')"><i class="fa fa-plus azure"></i><em>添加作者</em></a><a class="btn btnk-platinum" onclick="adddata('添加作者', '700px', '620px', 'AuthorOrginadd2.html')"><i class="fa fa-external-link azure"></i><em>添加来源</em></a><a class="btn btnk-platinum" onclick="adddata('添加作者', '700px', '260px', 'AuthorOrginadd3.html')"><i class="fa fa-trash azure"></i><em>添加关键字</em></a>
+  </div>
+
+</header>
+
+
+<section id="tmC0">
+
+  <table class="table-md table-border table-line hover-blue txt-c">
+    <thead>
+      <tr>
+        <th width='30'>选择</th>
+        <th width='40'>ID</th>
+        <th width='60'>作者姓名</th>
+        <th width='50'>性别</th>
+        <th width='120'>工作单位</th>
+        <th width='90'>联系地址</th>
+        <th width='90'>电话</th>
+        <th width='90'>QQ</th>
+        <th width='90'>电子邮箱</th>
+        <th></th>
+        <th width='50'>编辑</th>
+        <th width='50'>删除</th>
+      </tr>
+    </thead>
+    <tbody class="striped">
+      <script>
+        var authorout = "";
+        var sex = { 1: '男', 2: '女' };
+        for (i = 1; i < 10; i++) {
+          authorout += "<tr>";
+          authorout += "<td><div class='cka'><label><input id='moren' name='moren' type='checkbox'><span></span></label></div></td>";
+          authorout += "<td>" + i + "</td>";
+          authorout += "<td>think" + i + "</td>";
+          authorout += "<td>" + sex[(Math.floor(Math.random() * 2) + 1)] + "</td>";
+          authorout += "<td>合肥工业大学" + i + "</td>";
+          authorout += "<td>安徽合肥工业大学" + i + "</td>";
+          authorout += "<td>" + (Math.floor(Math.random() * 99999999) + 11111111) + i + "</td>";
+          authorout += "<td>" + (Math.floor(Math.random() * 99999999) + 11111111) + i + "</td>";
+          authorout += "<td>" + (Math.floor(Math.random() * 99999999) + 11111111) + i + "@qq.com</td>";
+          authorout += "<td></td>";
+          authorout += "<td class='line-1'><a class='btn ico btn_22'><i class='fa fa-edit blue f18'></i></td>";
+          authorout += "<td class='line-1'><a class='btn ico btn_22'><i class='fa fa-trash red f18'></i></a></td>";
+          authorout += "</tr>";
+        }
+        document.write(authorout);
+      </script>
+    </tbody>
+  </table>
+</section>
+
+<section class="none" id="tmC1">
+  <table class="table-sm table-border table-line hover-blue txt-c">
+    <thead>
+      <tr>
+        <th width='30'>选择</th>
+        <th width='40'>ID</th>
+        <th width='60'>来源名称</th>
+        <th width='50'>网址</th>
+        <th width='120'>联系人</th>
+        <th width='90'>电话</th>
+        <th width='90'>QQ</th>
+        <th width='90'>电子邮箱</th>
+        <th></th>
+        <th width='50'>编辑</th>
+        <th width='50'>删除</th>
+      </tr>
+    </thead>
+    <tbody class="striped">
+      <script>
+        var orginout = "";
+        var sex = { 1: '男', 2: '女' };
+        for (i = 1; i < 10; i++) {
+          orginout += "<tr>";
+          orginout += "<td class='txt-c'><div class='cka'><label><input id='moren' name='moren' type='checkbox'><span></span></label></div></td>";
+          orginout += "<td>" + i + "</td>";
+          orginout += "<td>来源" + i + "</td>";
+          orginout += "<td>http://www.abc" + i + ".com</td>";
+          orginout += "<td>think" + i + "</td>";
+          orginout += "<td>" + (Math.floor(Math.random() * 99999999) + 11111111) + i + "</td>";
+          orginout += "<td>" + (Math.floor(Math.random() * 99999999) + 11111111) + i + "</td>";
+          orginout += "<td>" + (Math.floor(Math.random() * 99999999) + 11111111) + i + "@qq.com</td>";
+          orginout += "<td></td>";
+          orginout += "<td class='line-1'><a class='btn ico btn_22'><i class='fa fa-edit blue f18'></i></td>";
+          orginout += "<td class='line-1'><a class='btn ico btn_22'><i class='fa fa-trash red f18'></i></a></td>";
+          orginout += "</tr>";
+        }
+        document.write(orginout);
+      </script>
+    </tbody>
+  </table>
+</section>
+
+<section class="none" id="tmC2">
+
+  <table class="table-sm table-border table-line hover-blue txt-c">
+    <thead>
+    <tr>
+      <th width='30'>选择</th>
+      <th width='40'>ID</th>
+      <th width='60'>首字母</th>
+      <th width='50'>TAGS名称</th>
+      <th width='120'>使用频率</th>
+      <th width='90'>今日</th>
+      <th width='90'>昨日</th>
+      <th width='90'>本周</th>
+      <th width='90'>最后使用时间</th>
+      <th></th>
+      <th width='50'>状态</th>
+      <th width='50'>编辑</th>
+      <th width='50'>删除</th>
+    </tr>
+    </thead>
+    <tbody class="striped">
+    <script>
+      var keyout = "";
+      var key = {
+        1: '<a class="btn btn-success btn_22 ico o"><i class="fa fa-check f12"></i></a>',
+        2: '<a class="btn btn-orange btn_22 ico o delete"><i class="fa fa-minus f12"></i></a>'
+      };
+      for (i = 1; i < 10; i++) {
+        keyout += "<tr>";
+        keyout += "<td><div class='cka'><label><input id='moren' name='moren' type='checkbox'><span></span></label></div></td>";
+        keyout += "<td>" + i + "</td>";
+        keyout += "<td>A</td>";
+        keyout += "<td>TAGS" + i + "</td>";
+        keyout += "<td>think" + i + "</td>";
+        keyout += "<td>" + (Math.floor(Math.random() * 99999) + 11111) + i + "</td>";
+        keyout += "<td>" + (Math.floor(Math.random() * 99999) + 11111) + i + "</td>";
+        keyout += "<td>" + (Math.floor(Math.random() * 99999) + 11111) + "</td>";
+        keyout += "<td>20170505</td>";
+        keyout += "<td></td>";
+        keyout += "<td class='line-1'>" + key[(Math.floor(Math.random() * 2) + 1)] + "</td>";
+        keyout += "<td class='line-1'><a class='btn ico btn_22'><i class='fa fa-edit blue f18'></i></td>";
+        keyout += "<td class='line-1'><a class='btn ico btn_22'><i class='fa fa-trash red f18'></i></a></td>";
+        keyout += "</tr>";
+      }
+      document.write(keyout);
+    </script>
+    </tbody>
+  </table>
+</section>
+
+
+  <script>
+    $('.editadd').on('click', function() {
+      layer.open({
+        type: 2,
+        title: '添加内部链接',
+        shadeClose: true,
+        shade: 0.3,
+        maxmin: true,
+        area: ['600px', '370px'],
+        content: 'ReWriteAdd.html' //iframe的url
+      });
+    });
+  </script>
+  <script src="../../thinkui/Thinkmodel/Tui-Admin/pageend.js"></script>
+
+
+
+
+</body>
+</html>

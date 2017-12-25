@@ -1,0 +1,224 @@
+﻿<!doctype html><html lang="zh-cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body class="tui-frame-FootPd">
+  <header class="rows headertab">
+    <ul id="tm">
+      <li onclick="PaPtabs(this,0);" class="pactive"><a class="btn btn-default"><i class="fa fa-registered azure"></i> <em>账号通API</em>
+      </a></li><li onclick="PaPtabs(this,1);"><a class="btn btn-default"><i class="fa fa-sellsy azure"></i> <em>社交营销设置</em>
+      </a></li><li onclick="PaPtabs(this,2);"><a class="btn btn-default"><i class="fa fa-undo azure"></i> <em>UC整合</em>
+      </a></li><li onclick="PaPtabs(this,3);"><a class="btn btn-default"><i class="fa fa-expand azure"></i> <em>物流API</em>
+      </a></li><li onclick="PaPtabs(this,4);"><a class="btn btn-default"><i class="fa fa-expand azure"></i> <em>短信接口</em></a></li>
+    </ul>
+</header>
+<script>
+  var dengluout = "";
+  for (i = 1; i < 10; i++) {
+    dengluout += "<tr>";
+    dengluout += "<td>"+i+"</td>";
+    dengluout += "<td><div class='cka'><label><input id='moren' name='moren' type='radio'><span class='text'></span></label></div></td>";
+    dengluout += "<td><span class='ico-inp'><input type='text' class='inp' value='登陆API" + i + "'><i class='fa fa-credit-card lightgray'></i></span></td>";
+    dengluout += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-user lightgray'></i></span></td>";
+    dengluout += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-key lightgray'></i></span></td>";
+    dengluout += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-link lightgray'></i></span></td>";
+    dengluout += "<td class='line-1'><a class='btn btn_22 btn-blue'><i class='fa fa-plus'></i><em>申请</em></a></td>";
+    dengluout += "</tr>";
+  }
+  var expput = "";
+  for (i = 1; i < 10; i++) {
+    expput += "<tr>";
+    expput += "<td>" + i + "</td>";
+    expput += "<td><span class='ico-inp'><input type='text' class='inp'' value='快递公司" + i + "'><i class='fa fa-credit-card lightgray'></i></span></td>";
+    expput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-user lightgray'></i></span></td>";
+    expput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-key lightgray'></i></span></td>";
+    expput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-link lightgray'></i></span></td>";
+    expput += "<td><div class='checka cga-22'><label><input id='moren' name='moren' type='radio'><span class='text'></span></label></div></td>";
+    expput += "<td><a class='btn btn_22 btn-blue'><i class='fa fa-plus'></i><span class='ct'>申请</span></a></td>";
+    expput += "</tr>";
+  }
+  var duanxinput = "";
+  for (i = 1; i < 5; i++) {
+    duanxinput += "<tr>";
+    duanxinput += "<td>" + i + "</td>";
+    duanxinput += "<td><div class='cka'><label><input name='moren' type='radio'><span class='text'></span></label></div></td>";
+    duanxinput += "<td>短信公司</td>";
+    duanxinput += "<td class='txt-c line-1'><span class='btn btn-orange btn_22'><i class='fa fa-credit-card'></i><em>余额</span></em></td>";
+    duanxinput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-user lightgray'></i></span></td>";
+    duanxinput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-key lightgray'></i></span></td>";
+    duanxinput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-link lightgray'></i></span></td>";
+    duanxinput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-code lightgray'></i></span></td>";
+    duanxinput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-subscript lightgray'></i></span></td>";
+    duanxinput += "<td class=line-1><a class='btn btn_22 btn-blue'><i class='fa fa-plus'></i><span class='ct'>申请</span></a></td>";
+    duanxinput += "</tr>";
+  }
+  var duanxinmodelput = "";
+  for (i = 1; i < 10; i++) {
+    duanxinmodelput += "<tr>";
+    duanxinmodelput += "<td>" + i + "</td>";
+    duanxinmodelput += "<td class='txt-c'><div class='cka'><label><input name='moren' type='checkbox'><span class='text'></span></label></div></td>";
+    duanxinmodelput += "<td>会员登录" + i + "</td>";
+    duanxinmodelput += "<td><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-user lightgray'></i></span></td>";
+    duanxinmodelput += "<td><input type='text' class='inp' value=''></td>";
+    duanxinmodelput += "</tr>";
+  }
+</script>
+
+<section class="" id="tmC0">
+  <table class="table-xs mb15">
+    <tbody>
+    <tr>
+      <td class="w100 tr">首次创建：</td>
+      <td>
+        <div class="cka def"><label><input name="firstreg" type="radio"><span class="text">自动创建</span></label><label><input name="firstreg" type="radio"><span class="text">不自动创建账号</span></label></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="w100 tr">默认组别：</td>
+      <td><div class="cka def"><label><input name="defaultgroup" type="radio"><span class="text">个人用户</span></label><label><input name="defaultgroup" type="radio"><span class="text">企业用户</span></label></div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table>
+    <thead class="strong">
+    <tr>
+      <th width='40'>ID</th>
+      <th width='30'>启用</th>
+      <th width='250'>接口名称</th>
+      <th width='250'>ApiID</th>
+      <th width='250'>ApiKey</th>
+      <th>返回的URL</th>
+      <th width='40'>申请</th>
+    </tr>
+    </thead>
+    <tbody>
+    <script>document.write(dengluout);</script>
+    </tbody>
+  </table>
+</section>
+
+<section class="none" id="tmC1">
+</section>
+
+<section class='none' id='tmC2'>
+  <table>
+    <tbody>
+    <tr>
+      <td class='w100 txt-r'>同步UCenter会员中心：</td>
+      <td class='w500 tl'>
+        <div class='cka def'><label><input name='firstreg' type='radio'><span class='text' checked>关闭</span></label><label><input name='firstreg' type='radio'><span class='text'>启用</span></label></div>
+      </td>
+      <td class='tl'></td>
+    </tr>
+    <tr>
+      <td class='w100 txt-r'>UC版本：</td>
+      <td class='w500 tl'><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-step-backward lightgray'></i></span></td>
+      <td class='tl'></td>
+    </tr>
+    <tr>
+      <td class='w100 txt-r'>应用ID：</td>
+      <td class='w500 tl'><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-list lightgray'></i></span></td>
+      <td class='tl'></td>
+    </tr>
+    <tr>
+      <td class='w100 txt-r'>通信密钥：</td>
+      <td class='w500 tl'><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-key lightgray'></i></span></td>
+      <td class='tl'></td>
+    </tr>
+    <tr>
+      <td class='w100 txt-r'>DZ数据库主机：</td>
+      <td class='w500 tl'><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-tv lightgray'></i></span></td>
+      <td class='tl'>TIPS:没有启用DZ论坛，此处请留空，否则会出错。</td>
+    </tr>
+    <tr>
+      <td class='w100 txt-r'>DZ数据库登入名：</td>
+      <td class='w500 tl'><span class='ico-inp'><input type='text' class='inp' value=''><i class='fa fa-user lightgray'></i></span></td>
+      <td class='tl'></td>
+    </tr>
+    <tr>
+      <td class='w100 txt-r'>DZ数据库名字：</td>
+      <td class='w500 tl'><span class='ico-inp'><input type='text' class='inp' value='localhost'><i class='fa fa-database lightgray'></i></span></td>
+      <td class='tl'></td>
+    </tr>
+    <tr>
+      <td class='w100 txt-r'>UCenter安装URL：</td>
+      <td class='w500 tl'><span class='ico-inp'><input type='text' class='inp' value='支付宝快捷登录'><i class='fa fa-link lightgray'></i></span></td>
+      <td class='tl'></td>
+    </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<section class="none" id="tmC3">
+  <table class="table table_xl table-border table-line hover-blue txt-c table-vm word-break mt10">
+    <thead class="strong">
+    <tr>
+      <th width='40'>ID</th>
+      <th width='250'>接口名称</th>
+      <th width='250'>ApiID</th>
+      <th width='250'>ApiKey</th>
+      <th>返回的URL</th>
+      <th width='30'>启用</th>
+      <th width='40'>申请</th>
+    </tr>
+    </thead>
+    <tbody>
+    <script>document.write(expput);</script>
+    </tbody>
+  </table>
+</section>
+
+<section class='none' id='tmC4'>
+  <div class='rows mt10 mb10'>
+    <span class='btn btnlink btn-26'><em>短信接口总开关：</em></span>
+    <div class='cka cka-26'>
+      <label><input name='firstreg' type='radio'><span class='text' checked>关闭</span></label><label><input name='firstreg' type='radio'><span class='text'>启用</span></label>
+    </div>
+    <span class='btn btnlink btn-26'><em>送验证间隔时间：</em></span><input type='text' class='inp inp-26 w50' value=''>
+    <span class='btn btnlink btn-26'><em>短信签名：</em></span><input type='text' class='inp inp-26 w150' value=''>
+  </div>
+
+  <table>
+    <thead class='strong'>
+    <tr>
+      <th width='40'>ID</th>
+      <th width='40'>默认</th>
+      <th width='50'>接口公司</th>
+      <th width='50'>接口余额</th>
+      <th width='200'>用户名</th>
+      <th width='200'>密码</th>
+      <th width='250'>发送接口URL</th>
+      <th width='250'>发送参数</th>
+      <th>成功标志</th>
+      <th width='40'>申请</th>
+    </tr>
+    </thead>
+    <tbody>
+    <script>document.write(duanxinput);</script>
+    </tbody>
+  </table>
+  <table>
+    <thead class='strong'>
+    <tr>
+      <th width='40'>ID</th>
+      <th width='30'>是否启用</th>
+      <th width='50'>模块名称</th>
+      <th>短信内容</th>
+      <th width='30'>每日上限</th>
+    </tr>
+    </thead>
+    <tbody>
+    <script>document.write(duanxinmodelput);</script>
+    </tbody>
+  </table>
+</section>
+
+<div class="tui-frame-Cave"><div><a class="btn btn-blue"><i class="fa fa-arrow-circle-left"></i> <span>取消返回</span></a><a class="btn btn-orange ml10"><i class="fa fa-save"></i> <span>确定保存</span></a></div></div>
+</body>
+</html>

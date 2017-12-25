@@ -1,0 +1,74 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+
+<section class="pn">
+  <table class="">
+    <tr>
+      <td width="50" class="tl">文件扩展名：</td>
+      <td><input class="inp w80" id="" name="" type='text' value='.aspx'> <span class="ico-inp ico-r s w100"><select class="inp"><option>.aspx</option><option>.html</option><option>.shtml</option></select><i class="fa fa-angle-down"></i></span></td>
+      <td width="80" class="prn"><a class="btn btn-blue editadd"><i class="fa fa-database"></i><em>添加新规则</em></a></td>
+    </tr>
+  </table>
+
+
+
+
+  <table class="">
+    <thead class="strong">
+    <tr>
+      <th width='30'>ID</th>
+      <th width='30'>启用</th>
+      <th width='150'>规则名称</th>
+      <th width='250'>伪静态正则表达式</th>
+      <th width='350'>被重写的地址</th>
+      <th>前台URL规则</th>
+      <th width='50' class="tr">删除</th>
+    </tr>
+    </thead>
+    <tbody>
+    <script>
+      var rwrire = "";
+      for (var i = 0; i < 25; i++) {
+        rwrire += "<tr>";
+        rwrire += "<td>" + i + "</td>";
+        rwrire += "<td class='txt-c'><div class='cka'><label><input name='moren' type='radio'><span></span></label></div></td>";
+        rwrire += "<td><input  class='inp' name='' type='text' value='contentlistpage'></td>";
+        rwrire += "<td><input  class='inp' name='' type='text' value='a/(\d+)-(\d+)[ext]'></td>";
+        rwrire += "<td><input  class='inp' name='' type='text' value='model/list.aspx?id=$1^page=$2'></td>";
+        rwrire += "<td><input  class='inp' name='' type='text' value='a/{$id}-{$page}[ext]'></td>";
+        rwrire += "<td class='line-1'><a class='btn btn_22 btn-orange'><i class='fa fa-plus'></i><em>删除</em></a></td>";
+        rwrire += "</tr>";
+      }
+      document.write(rwrire);
+    </script>
+
+
+    </tbody>
+  </table>
+
+</section>
+  <script>
+    $('.editadd').on('click', function() {
+      layer.open({
+        type: 2,
+        title: '添加内部链接',
+        shadeClose: true,
+        shade: 0.3,
+        maxmin: true,
+        area: ['600px', '370px'],
+        content: 'ReWriteAdd.html' //iframe的url
+      });
+    });
+  </script>
+
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageend.js"></script>
+
+</body>
+</html>

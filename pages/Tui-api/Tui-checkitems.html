@@ -1,0 +1,181 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title>ThinkUI组件检验</title>
+<meta name="keywords" content="ThinkUI组件检验">
+<meta name="description" content="ThinkUI组件检验">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="../../g.js"></script>
+  <script src="../../models-assets/Tui-Api/load-api.js"></script>
+</head>
+<body class="p15">
+
+  <div style="background: #DEDEDE; height: 38px;" class="mb20">
+
+    <span class='ico-inp' style='width: 100px'><i class='fa fa-tv orange'></i><input class='inp' /></span>
+    <span class='ico-inp block' style='width: 100px'><i class='fa fa-tv bg-orange'></i><input class='inp' /></span>
+    <span class='ico-inp block' style='width: 100px'><i class='fa fa-tv border-orange orange'></i><input class='inp  border-orange' /></span>
+    <span class='ico-inp ico-r block' style='width: 100px'><i class='fa fa-user o orange'></i><input class='inp ' /></span>
+    <div class='s-inp' style='width:150px'><div class='c'><a class='btn btn-blue ico'><i class='fa fa-tv'></i></a></div><input class='inp' /></div>
+    <div class='s-inp' style='width: 200px'><div class='c'><a class='btn btn-blue'><em>飞扬按钮</em><i class='fa fa-angle-down d'></i></a></div><input class='inp' /></div>
+    <div class='cka cka-blue'><label><input type='radio' name='a' checked='checked'><span class='text'>Basic</span></label></div>
+    <div class='cka cka-blue'><label><input type='checkbox' name='b' checked='checked'><span class='text'>Basic</span></label></div>
+    <div class='cka cka-blue'>
+      <label class='slider'><input type='checkbox' checked='checked'><span class='text'></span></label>
+      <label class='slider onoff'><input type='checkbox' checked='checked'><span class='text'></span></label>
+      <label class='slider toggle yesno'><input type='checkbox' checked='checked'><span class='text'></span></label>
+    </div>
+    <div class='ckb ckb-blue '>
+      <label>
+        <input type='radio' name='c' checked='checked' /><span class='text'>Basic</span>
+      </label><label>
+        <input type='radio' name='c' /><span class='text'>Basic</span>
+      </label><label><input type='radio' name='c' /><span class='text'>Basic</span></label>
+    </div>
+  </div>
+
+  <div style="background: #DEDEDE; height: 38px;" class="mb20">
+
+    <span class='ico-inp ico-r' style='width: 100px'><i class='fa fa-tv orange'></i><input class='inp' /></span>
+    <span class='ico-inp block ico-r' style='width: 100px'><i class='fa fa-tv bg-orange'></i><input class='inp' /></span>
+    <span class='ico-inp block ico-r' style='width: 100px'><i class='fa fa-tv border-orange orange'></i><input class='inp  border-orange' /></span>
+    <span class='ico-inp ico-r block' style='width: 100px'><i class='fa fa-user o orange'></i><input class='inp ' /></span>
+    <div class='s-inp' style='width:150px'><input class='inp' /><div class='c'><a class='btn btn-blue ico'><i class='fa fa-tv'></i></a></div></div>
+    <div class='s-inp' style='width: 200px'><input class='inp' /><div class='c'><a class='btn btn-blue'><em>飞扬按钮</em><i class='fa fa-angle-down d'></i></a></div></div>
+  </div><br>
+
+<script type="text/javascript">
+  var domsize3 = new Array("22", "24", "26", "28", "30", "32", "34", "36", "38", "40", "42", "44");
+  var divsize3 = new Array("22", "24", "26", "28", "30", "32", "34", "36", "38", "40", "42", "44");
+  var domString = "", domString2 = "";
+  var domString3 = "";
+  var domstring4 = "";
+
+  for (var i = 0; i < domsize3.length; i++) {
+    domString += "<div style='background:#dadada; height:" + divsize3[i] + "px;padding: 0 5px'>";
+    domString += "<button class='btn btn-blue btn_" + domsize3[i] + "'><i class='fa fa-qq'></i><em>" + domsize3[i] + "按钮</em><span class='badge bg-purple'>5</span></button> ";
+    domString += "<div class='btn btn-blue btn_" + domsize3[i] + " ico o'><i class='fa fa-qq'></i></div> ";
+    domString += "<div class='btn btn-blue btn_" + domsize3[i] + " ico'><i class='fa fa-qq'></i></div> ";
+    domString += "<div class='btn btn-blue btn_" + domsize3[i] + "'><em>1按钮" + domsize3[i] + "</em></div> ";
+    domString += "<label class='btn btn-blue btn_" + domsize3[i] + "'><i class='fa fa-cog'></i><em>2按钮</em></label> ";
+    domString += "<span class='btn btn-blue btn_" + domsize3[i] + "'><i class='fa fa-cog'></i><em>3按钮</em><span class='badge bg-purple'>5</span></span> ";
+    domString += "<a class='btn btn-blue btn_" + domsize3[i] + "'><i class='fa fa-cog'></i><em>4按钮</em><span class='badge bg-purple'>5</span></a> ";
+    domString += "<button class='btn btn-blue btn_" + domsize3[i] + " lab'><i class='fa fa-qq'></i><em>6按钮</em><span class='badge bg-orange'>5</span></button> ";
+    // domString += "<div class='s-btn'><a class='btn btn-blue btn_" + domsize3[i] + "' href='javascript:void(0);'><em>7按钮</em></a><a class='btn btn-blue d btn_" + domsize3[i] + "' data-toggle='dropdown' href='javascript:void(0);'><i class='fa fa-angle-down'></i></a><ul class='dropdown-menu dropdown-success'><li><a href='javascript:void(0);'>中文内容选项<span class='badge bg-purple fr' style='float:right'>5</span></a></li><li><a href='javascript:void(0);'>Something else here<span class='badge bg-purple fr' style='float:right'>5</span></a></li><li class='disabled'><a href='javascript:void(0);'>Something else here <span class='badge bg-purple fr' style='float:right'>5</span></a></li></ul></div> ";
+    //domString += "<div class='s-btn'><a class='btn btn-azure btn_" + domsize3[i] + "' href='javascript:void(0);' data-toggle='dropdown'><em>8按钮</em><i class='fa fa-angle-down ml10 mrn'></i></a><ul class='dropdown-menu dropdown-success'><li><a href='javascript:void(0);'>Something else here</a></li></ul></div> ";
+    domString += "<div class='s-btn'><a class='btn btn_" + domsize3[i] + " btn-blue'><i class='fa fa-tv'></i><em>飞扬按钮</em><i class='fa fa-angle-down d'></i></a></div>";
+
+    domString += " <div class='s-btn'><a class='btn btn_" + domsize3[i] + " btn-blue'><i class='fa fa-tv'></i><em>飞扬按钮</em></a><a class='btn btn_" + domsize3[i] + " btn-orange d'><i class='fa fa-angle-down'></i></a></div>";
+    domString += " <input type='text' class='inp inp_" + domsize3[i] + "' style='width:120px'> ";
+    domString += "<span class='select select_" + domsize3[i] + "'><select class='inp inp_" + domsize3[i] + "'><option>选择框</option></select><i class='fa fa-angle-down'></i></span>";
+    domString += "</div><br>";
+  }
+
+
+  for (var i = 0; i < domsize3.length; i++) {
+    domString2 += "<div style='background:#dadada; height:" + divsize3[i] + "px'>";
+
+    domString2 += "<span class='ico-inp inp_" + domsize3[i] + "' style='width: 100px'><i class='fa fa-tv orange'></i><input class='inp' value='" + domsize3[i] + "' /></span> ";
+    domString2 += "<span class='ico-inp block inp_" + domsize3[i] + "' style='width: 100px'><i class='fa fa-tv bg-orange'></i><input class='inp'  value='" + domsize3[i] + "' /></span> ";
+    domString2 += "<span class='ico-inp block inp_" + domsize3[i] + "' style='width: 100px'><i class='fa fa-tv border-orange orange'></i><input class='inp border-orange' value='" + domsize3[i] + "'  /></span> ";
+    domString2 += "<span class='ico-inp ico-r block inp_" + domsize3[i] + "' style='width: 100px'><i class='fa fa-user o orange'></i><input class='inp ' value='" + domsize3[i] + "'  /></span> ";
+    domString2 += "<div class='s-inp' style='width:150px'><div class='c'><a class='btn btn_" + domsize3[i] + " btn-blue ico'><i class='fa fa-tv'></i></a></div><input class='inp inp_" + domsize3[i] + "' value='" + domsize3[i] + "'  /></div> ";
+    domString2 += "<div class='s-inp' style='width: 200px'><div class='c'><a class='btn btn_" + domsize3[i] + " btn-blue'><em>飞扬按钮</em><i class='fa fa-angle-down d'></i></a></div><input class='inp inp_" + domsize3[i] + "' value='" + domsize3[i] + "'  /></div> ";
+    //domString2 += "<div class='s-inp' style='width: 200px'><div class='c'><a class='btn btn_" + domsize3[i] + " btn-blue'><em>飞扬按钮</em></a><a class='btn btn_" + domsize3[i] + " btn-orange d'><i class='fa fa-angle-down'></i></a></div><input class='inp inp_" + domsize3[i] + "' value='" + domsize3[i] + "'  /></div></div> ";
+
+
+
+    domString2 += "<div class='cka cka_" + domsize3[i] + " cka-blue'><label><input type='radio' name='a' checked='checked'><span class='text'>选择项</span></label></div> ";
+    domString2 += "<div class='cka cka_" + domsize3[i] + " cka-blue'><label><input type='checkbox' name='b' checked='checked'><span class='text'>选择项</span></label></div>  ";
+    domString2 += "<div class='cka cka_" + domsize3[i] + " cka-blue'>";
+    domString2 += "<label class='slider'><input type='checkbox' checked='checked'><span class='text'></span></label>";
+    domString2 += "<label class='slider onoff'><input type='checkbox' checked='checked'><span class='text'></span></label>";
+    domString2 += "<label class='slider toggle yesno'><input type='checkbox' checked='checked'><span class='text'></span></label>";
+    domString2 += "</div>";
+
+    domString2 += "<div class='ckb ckb_" + domsize3[i] + " ckb-blue '>";
+    domString2 += "<label><input type='radio' name='c' checked='checked'/><span class='text'>选择项</span>";
+    domString2 += "</label><label><input type='radio' name='c'/><span class='text'>选择项</span>";
+    domString2 += "</label><label><input type='radio' name='c' /><span class='text'>选择项</span></label>";
+    domString2 += "</div>";
+
+
+
+
+
+    domString2 += "</div><br>";
+  }
+
+
+  /* 
+   <div style="background: #DEDEDE; height: 32px; margin: 20px 0 0 0; padding: 0 50px">
+  <input class="inp" style="width: 150px"/>
+  <span class="ico-inp" style="width: 150px"><i class="fa fa-tv orange"></i><input class="inp" /></span>
+  <span class="ico-inp block" style="width: 150px"><i class="fa fa-tv bg-orange"></i><input class="inp" /></span>
+  <span class="ico-inp block" style="width: 150px"><i class="fa fa-tv border-orange orange"></i><input class="inp border-orange" /></span>
+  <span class="ico-inp ico-r block" style="width: 150px"><i class="fa fa-user o orange"></i><input class="inp" /></span>
+  <div class="s-inp" style="width: 200px"><div class="box"><div class="c"><a class="btn ico"><i class="fa fa-tv"></i></a></div><input class="inp" /></div></div>
+  <div class="s-inp" style="width: 200px"><div class="box"><div class="c"><a class="btn btn-blue"><em>飞扬按钮</em><i class="fa fa-angle-down d"></i></a></div><input class="inp" /></div></div>
+  <div class="s-inp" style="width: 200px"><div class="box"><div class="c"><a class="btn btn-blue"><em>飞扬按钮</em></a><a class="btn btn-orange d"><i class="fa fa-angle-down"></i></a></div><input class="inp" /></div></div>
+
+</div>
+
+<div style="background: #DEDEDE; height: 32px; margin: 20px 0 0 0; padding: 0 50px">
+  <input class="inp" style="width: 150px"/>
+  <span class="ico-inp ico-r" style="width: 150px"><i class="fa fa-tv orange"></i><input class="inp" /></span>
+  <span class="ico-inp ico-r block" style="width: 150px"><i class="fa fa-tv bg-orange"></i><input class="inp" /></span>
+  <span class="ico-inp ico-r block" style="width: 150px"><i class="fa fa-tv border-orange orange"></i><input class="inp border-orange" /></span>
+  <span class="ico-inp ico-r block" style="width: 150px"><i class="fa fa-user o orange"></i><input class="inp" /></span>
+  <div class="s-inp" style="width: 200px"><div class="box"><input class="inp"/><div class="c"><a class="btn ico"><i class="fa fa-tv"></i></a></div></div></div>
+  <div class="s-inp" style="width: 200px"><div class="box"><input class="inp"/><div class="c"><a class="btn btn-blue"><em>飞扬按钮</em><i class="fa fa-angle-down d"></i></a></div></div></div>
+  <div class="s-inp" style="width: 200px"><div class="box"><input class="inp"/><div class="c"><a class="btn btn-blue"><em>飞扬按钮</em></a><a class="btn btn-orange d"><i class="fa fa-angle-down"></i></a></div></div></div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+for (var i = 0; i < domsize3.length; i++) {
+    domString3 += "<div style='background:#dadada; height:" + divsize3[i] + "px'>";
+    //domString3 += "<button class='btn btn-azure btn_" + domsize3[i] + "'><i class='fa fa-qq'></i><span class='ct'>按钮" + domsize3[i] + "</span><span class='badge bg-purple'>5</span></button> ";
+    // domString3 += "<select class='select select-" + domsize3[i] + " w150'><option value='' selected>- 选择 -</option></select> ";
+    domString3 += "<input class='inp input-" + domsize3[i] + "' style='width:120px' type='text'> ";
+    domString3 += "<span class='ico-inp ' style='width:120px'><input class='inp input-" + domsize3[i] + " border-orange' type='text'><i class='fa fa-cog orange'></i></span> ";
+    domString3 += "<span class='ico-inp block' style='width:120px'><input type='text' class='inp input-" + domsize3[i] + "'><i class='fa fa-cog bg-orange'></i></span> ";
+    domString3 += "<span class='ico-inp inp-orange block' style='width:120px'><input class='inp input-" + domsize3[i] + "' type='text'><i class='fa fa-cog'></i></span> ";
+    domString3 += "<span class='ico-inp ico-r block' style='width:120px'><input class='inp input-" + domsize3[i] + "' type='text'><i class='fa fa-cog o orange'></i></span> ";
+
+
+    domString3 += "<span class='ico-inp' style='width:120px'><input type='text' class='inp input-" + domsize3[i] + " block'><i class='fa fa-cog bg-purple'></i></span> ";
+    domString3 += "<span class='ico-inp' style='width:120px'><input type='text' class='inputs input-" + domsize3[i] + " block'><i class='fa fa-cog purple circular'></i></span> ";
+    domString3 += "<span class='ico-inp ico-r' style='width:120px'><input class='inputs input-" + domsize3[i] + "' type='text'><i class='fa fa-cog purple circular'></i></span> ";
+    domString3 += "<div class='ckb cgb-" + domsize3[i] + " ckb-blue'><label><input type='checkbox' name='aaa' value='1'/><span class='text'>Basic</span></label><label><input type='checkbox' name='aaa' value='1' /><span class='text'>选择</span></label></label></div> ";
+    domString3 += "<div class='ckb cgb-" + domsize3[i] + " ckb-blue'><label><input type='radio' name='aaa' value='1'/><span class='text'>Basic</span></label><label><input type='radio' name='aaa' value='1' /><span class='text'>选择</span></label></label></div> ";
+    domString3 += "<div class='cka cga-" + domsize3[i] + "'><label><input id='a' name='a' type='radio'><span class='text blue'>删除</span></label><label><input id='a' name='a' type='checkbox'><span class='text'>删除</span></label></div> ";
+    domString3 += "</div><br>";
+  }
+*/
+  document.write(domString);
+  document.write(domString2);
+</script>
+
+
+
+
+
+
+
+
+<div class='col-xs-12 row border-t1 border-ivory p15 mt20 txt-c f12 darkgray'>
+    关于ThinkUI | 软件著作权 | 感谢捐赠<br>
+    Copyright ©2013-2017 ThinkPaP.net All Rights Reserved. <br>
+    ICP备案号：皖ICP备14021811号-2<br>
+    </div>
+</body>
+</html>

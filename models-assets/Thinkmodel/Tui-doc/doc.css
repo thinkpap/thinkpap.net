@@ -1,0 +1,17 @@
+﻿body{padding-top: 55px}
+
+.doc-aside{}
+.tip-app-drop{width:350px;min-width:250px;padding:10px;position:fixed; top:40px; overflow-y: auto; background: #FFF}
+
+@media(max-width:767px) {
+.tip-app-drop{width:auto;height:350px;padding:10px; position:fixed;right:5px!important; left: 5px!important; overflow-y: auto; background: #FFF}
+
+}
+
+
+
+.frame{width:100%;height:650px;padding:0;margin:0;border:0}
+
+.tip-app-drop .ul_list small,.tip-app-drop .ul_list .lines{display:none!important}
+.tip-app-drop .ul_list li{width: 25%!important}
+

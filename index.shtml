@@ -1,0 +1,141 @@
+<!doctype html><html lang="zh_cn"><head>
+<title>ThinkPaP UI ThinkUI,很好用的一款轻量级前端框架</title>
+<meta name="keywords" content="ThinkPaP UI,ThinkUI,前端框架">
+<meta name="description" content="ThinkPaP UI ThinkUI,很好用的一款轻量级前端框架">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="thinkplus/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="thinkui/css/Tui.css" rel="stylesheet" />
+<script src="thinkui/js/css-param.js"></script>
+<script src="thinkui/js/css-style.js"></script>
+<link href="models-assets/Think-thinkpapnet/thinkapnet.css" rel="stylesheet" />
+<script src="thinkplus/jquery/jquery-2.1.4.js"></script>
+<script src="thinkui/js/tui.js"></script>
+  <style>
+  .banner {height: 500px;background: url('models-assets/Think-thinkpapnet/images/banner.jpg') center 0;}
+  a{text-decoration:none!important}
+  @media (max-width:767px){
+  .banner {height: 180px;background: url('models-assets/Think-thinkpapnet/images/banner.jpg') right bottom;}
+  }
+  </style>
+</head>
+
+<body class="top-body">
+<header class="bg-inverse top-fix">
+  <div class='tip-app-logo'></div>
+  <div class='f-l hid-xs'>
+    <a class='btn btn_40 btn-inverse' href='/'><i class='fa fa-home'></i> <em>网站首页</em>
+    </a><a class='btn btn_40 btn-inverse' href='Templetes/Tui-doc/start.html'><em>框架文档</em>
+    </a><a class='btn btn_40 btn-inverse' href='Templetes/Tui-doc/start.html'><em>框架扩展</em>
+    </a><a class='btn btn_40 btn-inverse' href='Templetes/Tui-doc/p-code.html'><em>插件中心</em>
+    </a><a class="btn btn_40 btn-inverse" href="Toolss/index.html"><em>在线工具</em>
+    </a><a class='btn btn_40 btn-inverse' href='school/index.html'><em>前端分享</em></a>
+  </div>
+  <div class='s-btn hid-sm hid-md hid-lg f-r'>
+    <a href='javascript:void(0);' data-toggle='dropdown' class='btn btn_40 ico btn-inverse'><i class='fa fa-navicon f22'></i></a>
+    <div class='drop tip-app-drop right p5'>
+      <a class='btn btn_30' href='/'><i class='fa fa-home'></i><em>网站首页</em>
+      </a><a class='btn btn_30' href='Templetes/Tui-doc/start.html'><i class='fa fa-home'></i><em>框架文档</em>
+      </a><a class='btn btn_30' href='Templetes/Tui-doc/start.html'><i class='fa fa-home'></i><em>框架扩展</em>
+      </a><a class='btn btn_30' href='Templetes/Tui-doc/p-code.html'><i class='fa fa-home'></i><em>插件中心</em></a>
+    </div>
+  </div>
+  <a class='btn btn_40 btn-success f-r hid-xs' href='/'><i class='fa fa-home'></i> <em>捐赠UI</em></a>
+  <div class='tip-app-logo'></div>
+  <div class='tip-app-title'>Think UI</div>
+</header>
+
+<div class="col-xs-12 banner">
+  <div class="col-xs-12 txt-c white f70 xs-f40 pt30">Think UI</div>
+  <div class="col-xs-12 txt-c white f40 xs-f20">基于移动互联设备的智慧前端设计框架<br />全开源解决方案</div>
+  <div class="col-xs-12 txt-c f16 line-2 pt20 darkgray hid-xs">倾情打造，面向所有层次的前后端程序猿，零门槛开箱即用的前端UI解决方案</div>
+  <div class="col-xs-12 pt20 txt-c hid-xs"><a href="#" class="btn btn_40 btn-success radius4"><i class="fa fa-download"></i><em>立即下载体验</em></a></div>
+  <div class="col-xs-12 txt-c f16 line-2 pt20 darkgray hid-xs">当前版本：2.1.7 更新日志 下载量：282808</div>
+  <div class="col-xs-12 txt-c f16 line-2 pt20 darkgray hid-xs">群号：58983880(认证码:thinkui2017)</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="col-xs-6 col-sm-3 pt20 pr10 pl10">
+      <a href="pages/Tui-api/index.html" target="_blank">
+        <div class="border1 border-gray p5">
+          <div class="rows bg-azure pt15 pb15 txt-c white"><span class="f50">A</span><span class="f30">pi</span></div>
+          <div class="rows txt-c f24 mf20 line-2">框架文档</div>
+          <div class="rows pl5 pr5 pb15 hid-xs">包涵UI的所有教程和开发源文件，配色生成器和尺寸生成器。</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 pt20 pr10 pl10">
+      <a href="pages/Think-temp/Tui-Manage/index.html" target="_blank">
+        <div class="border1 border-gray p5">
+          <div class="rows bg-blue pt15 pb15 txt-c white"><span class="f50">A</span><span class="f30">dmin</span></div>
+          <div class="rows txt-c f24 mf20 line-2">管理框架</div>
+          <div class="rows pl5 pr5 pb15 hid-xs">通用的后台或者管理系统框架UI，即下即用，方便开发和二次开发。</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 pt20 pr10 pl10">
+      <a href="pages/Think-temp/Tui-Cms-App/cms-article.html" target="_blank">
+        <div class="border1 border-gray p5">
+          <div class="rows bg-primary pt15 pb15 txt-c white"><span class="f50">N</span><span class="f30">ews</span></div>
+          <div class="rows txt-c f24 mf20 line-2">通用新闻模块</div>
+          <div class="rows pl5 pr5 pb15 hid-xs">标准响应式信息模板，自适应手机端，调整参数可实现动态排版。</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 pt20 pr10 pl10">
+      <a href="pages/Think-temp/Tui-Cms-App/Tui-mobile-users-apple.html" target="_blank">
+        <div class="border1 border-gray p5">
+          <div class="rows bg-success pt15 pb15 txt-c white"><span class="f50">M</span><span class="f30">obile</span></div>
+          <div class="rows txt-c f24 mf20 line-2">通用手机UI</div>
+          <div class="rows pl5 pr5 pb15 hid-xs">搜集整理的通用手机端常用UI，方便快捷的进行移动端布局。</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="col-xs-6 col-sm-3 pt20 pr10 pl10">
+      <a href="pages/Tui-plus/index.html" target="_blank">
+        <div class="border1 border-gray p5">
+          <div class="rows bg-warning pt15 pb15 txt-c white"><span class="f50">P</span><span class="f30">lus</span></div>
+          <div class="rows txt-c f24 mf20 line-2">插件库</div>
+          <div class="rows pl5 pr5 pb15 hid-xs">搜集当前最前沿的脚本库,结合UI定期更新方便使用。</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 pt20 pr10 pl10">
+      <a href="pages/Think-site/index.html" target="_blank">
+        <div class="border1 border-gray p5">
+          <div class="rows bg-orange pt15 pb15 txt-c white"><span class="f50">D</span><span class="f30">eve Site </span></div>
+          <div class="rows txt-c f24 mf20 line-2">开发导航</div>
+          <div class="rows pl5 pr5 pb15 hid-xs">搜集网络中的技术开发网站，方便开发者查询。</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 pt20 pr10 pl10">
+      <a href="pages/Think-tools/index.html" target="_blank">
+        <div class="border1 border-gray p5">
+          <div class="rows bg-danger pt15 pb15 txt-c white"><span class="f50">H</span><span class="f30">tml tools</span></div>
+          <div class="rows txt-c f24 mf20 line-2">前端工具</div>
+          <div class="rows pl5 pr5 pb15 hid-xs">标准响应式信息模板，自适应手机端，调整参数可实现动态排版。</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 pt20 pr10 pl10 none">
+      <a href="Templetes/Tui-Cms-App/Tui-mobile-users-apple.html" target="_blank">
+        <div class="border1 border-gray p5">
+          <div class="rows bg-purple pt15 pb15 txt-c white"><span class="f50">M</span><span class="f30">obile</span></div>
+          <div class="rows txt-c f24 mf20 line-2">通用手机UI</div>
+          <div class="rows pl5 pr5 pb15 hid-xs">搜集整理的通用手机端常用UI，方便快捷的进行移动端布局。</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="rows bg-carbon"><div class="row f16 p15">ICP备案号：皖ICP备14021811号-2</div></div>
+</body>
+</html>

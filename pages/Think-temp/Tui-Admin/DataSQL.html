@@ -1,0 +1,43 @@
+﻿<!doctype html><html lang="zh-cn"><head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+<section class="rows pn"><span class="ico-inp ico-r"><textarea rows="6"></textarea><i class="fa fa-code purple"></i></span></section>
+
+<section class="tui-frame-section">
+  <table class="table bordered">
+    <thead>
+    <tr>
+      <th width='30'><strong>id</strong></th>
+      <th width='50'><strong>title</strong></th>
+      <th width='50'><strong>author</strong></th>
+      <th width='50'><strong>adddate</strong></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody class="striped">
+    <script>
+      var databaseback = "";
+      for (var i = 0; i < 13; i++) {
+        databaseback += "<tr>";
+        databaseback += "<td class='txt-c'>" + i + "</td>";
+        databaseback += "<td>查询标题" + i + "</td>";
+        databaseback += "<td>文章作者" + i + "</td>";
+        databaseback += "<td>20170505</td>";
+        databaseback += "<td></td>";
+        databaseback += "</tr>";
+      }
+      document.write(databaseback);
+    </script>
+
+    </tbody>
+  </table>
+
+
+</section>
+
+</body>
+</html>

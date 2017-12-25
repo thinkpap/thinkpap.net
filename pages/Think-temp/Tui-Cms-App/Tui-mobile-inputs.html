@@ -1,0 +1,122 @@
+﻿<!doctype html><html lang="zh_cn">
+<head>
+  <title></title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <script type="text/javascript">var classname = "ThinkUI 表单"; var countdown = 60;
+    function sendemail() {
+      var obj = $("#btncode");
+      settime(obj);
+
+    }
+    function settime(obj) { //发送验证码倒计时
+      if (countdown == 0) {
+        obj.attr('disabled', false);
+        //obj.removeattr("disabled");
+        obj.val("获取验证码");
+        countdown = 60;
+        return;
+      } else {
+        obj.attr('disabled', true);
+        obj.val("重 发 (" + countdown + ")");
+        countdown--;
+      }
+      setTimeout(function () { settime(obj) }, 1000);
+    }</script>
+  <script src="../../../g.js"></script>
+  <script src="../../../models-assets/Think-temp/Tp-cms-app/load-cms-app.js"></script>
+</head>
+<body class="top-body bot-body">
+<header class="bg-blue top-fix"><script>topmenu();</script></header>
+
+<div class="app-row">
+
+  <div class="e-table pt15 app-input">
+    <div class="tr"><div class="td w5 pr5">用户名：</div><div class="td"><input type="text" class="inp radius4"></div></div>
+    <div class="tr"><div class="td w5 pr5">用户名：</div><div class="td"><input type="text" class="inp radius4"></div></div>
+  </div>
+
+  <div class="e-table app-input">
+    <div class="tr">
+      <div class="td"><span class="ico-inp"><input type="text" class="inp radius4" placeholder="用户名"><i class="fa fa-user blue"></i></span></div>
+    </div>
+    <div class="tr">
+      <div class="td"><span class="ico-inp"><input type="text" class="inp radius4" placeholder="输入密码"><i class="fa fa-key blue"></i></span></div>
+    </div>
+    <div class="tr">
+      <div class="td"><span class="ico-inp"><input type="text" class="inp radius4" placeholder="QQ号码"><i class="fa fa-qq blue"></i></span></div>
+    </div>
+    <div class="tr">
+      <div class="td"><span class="ico-inp"><input type="text" class="inp radius4" placeholder="请输入邮箱"><i class="fa fa-envelope blue"></i></span></div>
+    </div>
+    <div class="tr">
+      <div class="td"><span class="ico-inp"><input type="text" class="inp block radius4" placeholder="请输入验证码"><i class="fa fa-code orange"></i><p class="w100 code-av"><input class="inp inp_22 border-n txt-c pn" type="button" id="btncode" value="获取验证码" onclick="sendemail()"></p></span></div>
+    </div>
+    <div class="tr">
+      <div class="td"><span class="ico-inp"><input type="text" class="inp block radius4" placeholder="请输入验证码"><i class="fa fa-code orange"></i><p class="w100 code-av img"><img src="../../models-assets/Think-images/checks.jpg" /></p></span></div>
+    </div>
+  </div>
+  <div class="e-table app-input">
+    <div class="tr">
+      <div class="td"><span class="ico-inp"><input type="text" class="inp radius4" placeholder="请输入验证码"><i class="fa fa-code orange"></i></span></div>
+      <div class="td w20 pl15"><input class="inp w100 txt-c" type="button" id="btncodes" value="获取验证码" onclick="sendemail()">
+      </div>
+    </div>
+    <div class="tr">
+      <div class="td"><span class="ico-inp"><input type="text" class="inp radius4" placeholder="请输入验证码"><i class="fa fa-envelope orange"></i></span></div>
+      <div class="td w20 pl15 vt"><img src="../../models-assets/Think-images/checks.jpg" class="checkimg"/>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="e-table app-linemenu onepx-b">
+    <div class="tr">
+      <div class="td ico"><i class="fa fa-desktop lico blue"></i></div>
+      <div class="td tit">您的性别</div>
+      <div class="td box">
+        <div class='cka cka_28'>
+          <label><input type='radio' name="form-field-radio1" class='coloorange-blue'><span>男</span></label>
+          <label><input type='radio' name="form-field-radio1" class='coloorange-blue mr10'><span>女</span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="e-table app-linemenu onepx-b">
+    <div class="tr">
+      <div class="td ico"><i class="fa fa-map-marker lico o bg-blue"></i>
+      </div>
+      <div class="td tit">允许共享位置</div>
+      <div class="td box">
+        <div class="cka mobile cka-blue"><label class="slider"><input type="checkbox" checked="checked"><span></span></label></div>
+      </div>
+    </div>
+  </div>
+  <div class="e-table app-linemenu onepx-b">
+    <div class="tr">
+      <div class="td ico"><i class="fa fa-map-marker lico o bg-blue"></i></div>
+      <div class="td tit">选择地区</div>
+      <div class="td box"><span class="select select_28 w80"><select name="province5" class="inp inp_28"></select><i class="fa fa-angle-down"></i></span>
+        <span class="select select_28 w80"><select name="city5" class="inp inp_28"></select><i class="fa fa-angle-down"></i></span>
+        <span class="select select_28 w80"><select name="area5" class="inp inp_28"></select><i class="fa fa-angle-down"></i></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+
+<div class="app-row txt-c mt20"><button class="btn btn_44 btn-blue w300"><em>确认提交</em></button>
+</div>
+  <script>mobilebotmenu();</script>
+  <script>new PCAS("province5", "city5", "area5", "江苏省", "扬州市");</script>
+
+</body>
+
+</html>

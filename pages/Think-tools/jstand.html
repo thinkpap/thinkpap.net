@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="zh_cn">
+<head>
+  <title>HTML-JS 加密/格式化</title>
+  <meta name="keywords" content="HTML-JS 加密/格式化">
+  <meta name="description" content="HTML-JS 加密/格式化">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script>var classname = "css格式化/压缩"</script>
+  <script src="../../g.js"></script>
+  <script src="../../models-assets/Tui-Api/load-api.js"></script>
+  <script src="../../models-assets/Think-tools/load-tool1.js"></script>
+</head>
+<body>
+  <header class="bg-blue top-fix">
+    <div class="tip-app-logo"></div>
+    <div class="f-l hid-xs">
+      <a class="btn btn_40 btn-blue" href="http://www.thinkpap.net"><i class="fa fa-home"></i> <em>网站首页</em>
+      </a><a class="btn btn_40 btn-blue" href="../Tui-api/index.html"><em>文档首页</em>
+      </a><a class="btn btn_40 btn-blue" href="index.html"><em>工具首页</em></a>
+    </div>
+    <div class="s-btn dropdown f-r">
+      <a href="javascript:void(0);" data-toggle="dropdown" class="btn btn_40 ico btn-blue"><i class="fa fa-navicon i"></i></a>
+      <div class="drop tip-app-drop right">
+        <script>links();</script>
+      </div>
+    </div>
+    <div class="tip-app-logo"></div>
+    <div class="tip-app-title">
+      <script>document.write(classname)</script>
+    </div>
+  </header>
+
+  <div class="row pl15 pr15">
+    <aside class="col-sm-2 hid-xs">
+      <div class="cross border-l3"><h1>HTML-JS-CSS工具</h1></div>
+     <div class="cms pt10">
+        <ul class="ul_list hover-ivory">
+          <li><a href="csstand.html" class="blank a">Css格式化</a></li><li class="lines"></li>
+          <li><a href="html-js.html" class="blank a">HTML-JS 代码互转</a></li><li class="lines"></li>
+          <li><a href="jstand.html" class="blank a">HTML-JS 加密/格式化</a></li><li class="lines"></li>
+        </ul>
+      </div>
+    </aside>
+    <section class="col-xs-12 col-sm-10 col-lg-10 pl30 xs-pln">
+      <div class="wrapper">
+        <div class="wwlr auto">
+          <form>
+            <div class="col-xs-12"><textarea id="content" name="content" class="inp" style="height:250px" placeholder="html/js源代码"></textarea></div>
+            <hr class="col-xs-12 f-l" />
+            <div class="col-xs-12"><textarea id="result" name="result" class="inp" style="height:250px" placeholder="输出结果"></textarea></div>
+            <div class="col-xs-12 txt-r pt15">
+              <input class="btn btn_32 btn-blue" type="button" value="格式化" id="beautify">
+              <input class="btn btn_32 btn-blue" type="button" value="普通压缩" id="pack0" />
+              <input class="btn btn_32 btn-blue" type="button" value="加密压缩" id="pack1" />
+            </div>
+            <div class="GuoLvWrapCenter pt10 clearfix none">
+              <div class="MainCate-choese ToolChoese pr fr zI1 mt3">
+                <div class="MainCateW-cont SearChoese w90">制表符缩进</div><input name="tabsize" id="tabsize" value="" type="hidden" /><span class="MCicon-drop-down SearChoese"></span>
+                <ul class="MainCateC-down SearChoese-show w100"><li><a href="javascript:" val="1">制表符缩进</a></li><li><a href="javascript:" val="2">2个空格缩进</a></li><li><a href="javascript:" val="4">4个空格缩进</a></li><li><a href="javascript:" val="8">8个空格缩进</a></li></ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script> hcj.jsFormat();</script>
+    </section>
+  </div>
+  <script>footers();</script>
+</body>
+</html>

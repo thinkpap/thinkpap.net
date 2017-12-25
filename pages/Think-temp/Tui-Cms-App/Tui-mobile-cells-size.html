@@ -1,0 +1,78 @@
+﻿<!doctype html><html lang="zh_cn">
+<head>
+  <title></title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script type="text/javascript">
+    var classname="ThinkUI 元素检测";
+  </script>
+  <script src="../../../g.js"></script>
+  <script src="../../../models-assets/Think-temp/Tp-cms-app/load-cms-app.js"></script>
+</head>
+<body class="top-body bot-body">
+<header class="Tui-menu bg-blue top-fix"><script>topmenu();</script></header>
+<div class="app-rows ">
+
+</div>
+<script>mobilebotmenu();</script>
+
+
+
+
+
+
+<div class="Tui-page p15">
+
+  <h1 class="mt10">2.10 组件组合检验</h1>
+  <hr>
+  <script type="text/javascript">
+    var domsize3=new Array("20","22","24","26","28","30","32","34","36","38","40","42","44","46","48","50");
+    var divsize3=new Array("20","22","24","26","28","30","32","34","36","38","40","42","44","46","48","50");
+    var domString="";
+    var domString3="";
+    var domstring4="";
+
+    for(var i=0;i<domsize3.length;i++) {
+      domString+="<div style='background:#dadada; height:"+divsize3[i]+"px'>";
+      domString+="<div class='btn btn-azure btn-"+domsize3[i]+" icon-only btn-circle'><i class='fa fa-qq'></i></div> ";
+      domString+="<div class='btn btn-azure btn-"+domsize3[i]+" icon-only'><i class='fa fa-qq'></i></div> ";
+      domString+="<div class='btn btn-azure btn-"+domsize3[i]+"'><span class='ct bg-red'>圆园"+domsize3[i]+"</span></div> ";
+      domString+="<label class='btn btn-azure btn-"+domsize3[i]+"'><i class='fa fa-cog'></i><span class='ct'>圆园</span></label> ";
+      domString+="<span class='btn btn-azure btn-"+domsize3[i]+"'><i class='fa fa-cog'></i><span class='ct'>圆园</span><span class='badge bg-purple'>5</span></span> ";
+      domString+="<a class='btn btn-azure btn-"+domsize3[i]+"'><i class='fa fa-cog'></i><span class='ct'>圆园</span><span class='badge bg-purple'>5</span></a> ";
+      domString+="<button class='btn btn-azure btn-"+domsize3[i]+"'><i class='fa fa-qq'></i><span class='ct'>圆园</span><span class='badge bg-purple'>5</span></button> ";
+      domString+="<button class='btn btn-blue btn-"+domsize3[i]+" btnlabel'><i class='fa fa-qq'></i><span class='ct'>圆园</span><span class='badge bg-orange'>5</span></button> ";
+      domString+="<div class='btn-group'><a class='btn btn-azure btn-"+domsize3[i]+"' href='javascript:void(0);'><span class='ct'>圆园</span></a><a class='btn btn-blue dropdown-toggle btn-"+domsize3[i]+"' data-toggle='dropdown' href='javascript:void(0);'><i class='fa fa-angle-down'></i></a><ul class='dropdown-menu dropdown-success'><li><a href='javascript:void(0);'>中文内容选项<span class='badge bg-purple fr' style='float:right'>5</span></a></li><li><a href='javascript:void(0);'>Something else here<span class='badge bg-purple fr' style='float:right'>5</span></a></li><li class='disabled'><a href='javascript:void(0);'>Something else here <span class='badge bg-purple fr' style='float:right'>5</span></a></li></ul></div> ";
+      domString+="<div class='btn-group'><a class='btn btn-azure btn-"+domsize3[i]+"' href='javascript:void(0);' data-toggle='dropdown'><span class='ct'>圆园</span><i class='fa fa-angle-down ml10 mrn'></i></a><ul class='dropdown-menu dropdown-success'><li><a href='javascript:void(0);'>Something else here</a></li></ul></div> ";
+      domString+="<input type='text' class='inputs input-"+domsize3[i]+" w120'> ";
+      domString+="</div><br>";
+    }
+    for(var i=0;i<domsize3.length;i++) {
+      domString3+="<div style='background:#dadada; height:"+divsize3[i]+"px'>";
+      //domString3 += "<button class='btn btn-azure btn-" + domsize3[i] + "'><i class='fa fa-qq'></i><span class='ct'>圆园" + domsize3[i] + "</span><span class='badge bg-purple'>5</span></button> ";
+      domString3+="<select class='select select-"+domsize3[i]+" w150'><option value='' selected>- 选择 -</option></select> ";
+      domString3+="<input type='text' class='inputs input-"+domsize3[i]+" w120'> ";
+      domString3+="<span class='input-icons bordered w120'><input type='text' class='inputs input-"+domsize3[i]+" border-blue block'><i class='fa fa-cog border-right-blue blue'></i></span> ";
+      domString3+="<span class='input-icons w120'><input type='text' class='inputs input-"+domsize3[i]+"'><i class='fa fa-cog purple'></i></span> ";
+      domString3+="<span class='input-icons icons-right w120'><input type='text' class='inputs input-"+domsize3[i]+"'><i class='fa fa-cog purple'></i></span> ";
+      domString3+="<span class='input-icons w120'><input type='text' class='inputs input-"+domsize3[i]+" block'><i class='fa fa-cog bg-purple'></i></span> ";
+      domString3+="<span class='input-icons icons-right w120'><input type='text' class='inputs input-"+domsize3[i]+"'><i class='fa fa-cog bg-purple'></i></span> ";
+      domString3+="<span class='input-icons w120'><input type='text' class='inputs input-"+domsize3[i]+" block'><i class='fa fa-cog purple circular'></i></span> ";
+      domString3+="<span class='input-icons icons-right w120'><input type='text' class='inputs input-"+domsize3[i]+"'><i class='fa fa-cog purple circular'></i></span> ";
+      domString3+="<div class='checkb cgb-"+domsize3[i]+" c-blue'><label><input type='checkbox' name='aaa' value='1'/><span class='text'>Basic</span></label><label><input type='checkbox' name='aaa' value='1' /><span class='text'>选择</span></label></label></div> ";
+      domString3+="<div class='checkb cgb-"+domsize3[i]+" c-blue'><label><input type='radio' name='aaa' value='1'/><span class='text'>Basic</span></label><label><input type='radio' name='aaa' value='1' /><span class='text'>选择</span></label></label></div> ";
+      domString3+="<div class='checka cga-"+domsize3[i]+"'><label><input id='a' name='a' type='radio'><span class='text blue'>删除</span></label><label><input id='a' name='a' type='checkbox'><span class='text'>删除</span></label></div> ";
+      domString3+="</div><br>";
+    }
+
+    document.write(domString);
+    document.write(domString3);
+  </script>
+
+</div>
+<script>mobilebotmenu();</script>
+
+</body>
+</html>

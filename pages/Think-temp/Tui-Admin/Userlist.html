@@ -1,0 +1,124 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+<header>
+    <div class="s-btn">
+      <a class="btn btn-default"><i class="fa fa-plus"></i><em>所有用户</em>
+      </a><a class="btn btn-default"><i class="fa fa-external-link"></i><em>锁定的用户</em>
+      </a><a class="btn btn-default"><i class="fa fa-trash"></i><em>所有管理员</em>
+      </a><a class="btn btn-default"><i class="fa fa-times"></i><em>待认证</em>
+      </a><a class="btn btn-default"><i class="fa fa-cog"></i><em>待邮件激活</em>
+      </a><a class="btn btn-default"><i class="fa fa-arrows"></i><em>24小时内登录</em>
+      </a><a class="btn btn-default"><i class="fa fa-file-text"></i><em>24小时内注册</em>
+      </a><a class="btn btn-default"><i class="fa fa-file-text"></i><em>VIP未到期</em>
+      </a><a class="btn btn-default"><i class="fa fa-file-text"></i><em>VIP已过期</em>
+      </a><a class="btn btn-default icon-only fr" onclick='showhidediv("artsech")'><i class="fa fa-search"></i></a>
+    </div>
+
+</header>
+
+
+
+
+  <div class="rows pt15 none" id="artsech" style="display:none;">
+    <span class="ico-inp ico-r s inp-28 w150"><select class="inp"><option value=''>- 查询条件 -</option><option value=''>签收</option></select><i class="fa fa-angle-down"></i></span>
+    <input class="inp w150 inp-28" type='text' placeholder="标题关键字,可留空" value='' size='12' name='keyword'>
+    <span id='SearchDate'>
+      <span class="btn btn-28 ico"><em>从</em></span>
+      <input class="inp w120 inp-28" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd' });" type='text' size='12' name='StartDate' id='StartDate'>
+      <span class="btn btn-28 ico"><em>至</em></span>
+      <input class="inp w120 inp-28" type='text' size=12 name='EndDate' id='EndDate' onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd' });">
+    </span>
+    <a class='btn btn-azure btn-28' value=''><em>开始筛选</em></a>
+    
+
+  </div>
+
+
+
+<header class="rows headertab pt15">
+  <ul id="tm" class="fl">
+    <li onclick="PaPtabs(this, 0);" class="pactive"><a class="btn btn-default"><i class="fa fa-paste azure"></i> <em>所有用户</em>
+    </a></li><li onclick="PaPtabs(this, 1);"><a class="btn btn-default"><i class="fa fa-file-text azure"></i> <em>供应商</em>
+    </a></li><li onclick="PaPtabs(this, 2);"><a class="btn btn-default"><i class="fa fa-cogs azure"></i> <em>分销商</em>
+    </a></li><li onclick="PaPtabs(this, 3);"><a class="btn btn-default"><i class="fa fa-users azure"></i> <em>网站管理员</em>
+    </a></li><li onclick="PaPtabs(this, 4);"><a class="btn btn-default"><i class="fa fa-users azure"></i> <em>个人会员</em>
+    </a></li><li onclick="PaPtabs(this, 5);"><a class="btn btn-default"><i class="fa fa-users azure"></i> <em>企业会员</em></a></li>
+    
+  </ul>
+  <ul class="fr">
+    <li><a class="btn"><em>共有：99条数据</em></a></li>
+  </ul>
+</header>
+
+  <script>
+    var userhead = "<tr class='strong'><th width=30><div class='cka'><label><input name='select' type='checkbox' onclick='if (this.checked){Select(0)}else{Select(2)}'><span class='text'></span></label></div></th><th width='50'>ID</th><th width='120'>用户名</th><th width='100'>用户组</th><th width='150'>财富</th><th width='100'>有效期</th><th width='150'>最后登录IP</th><th width='150'>登录次数</th><th width='100'>状态</th><th></th><th width='60'>修改</th><th width='60'>删除</th><th width='60'>充值</th></tr></thead>"
+
+    function user(kind){
+    var input = "";
+      for (var i = 0; i < 15; i++) {
+        input += "<tr id='u" + i + "' onclick=chk_idiv('" + i + "')>";
+        input += "<td><div class='cka'><label><input name='id' type='checkbox' id='c" + i + "' value='" + i + "'><span class='text'></span></label></div></td>";
+        input += "<td>" + i + "</td><td class='tl'>ThinkPaP" + i + "</td>";
+        input += "<td>" + kind + "</td><td class='tl'>120.00元 1209分</td><td class='tl'>150天</td>";
+        input += "<td class='tl'>127.0.0.1</td>";
+        input += "<td>9次</td><td>锁定</td>";
+        input += "<td></td>";
+        input += "<td class='line-1'><a class='btn btn_22 ico o'><i class='fa fa-edit blue f20'></i></a></td>";
+        input += "<td class='line-1><a class='btn btn_22 ico o'><i class='fa fa-times red f20'></i></a></td>";
+        input += "<td class='line-1><a class='btn btn_22 ico o'><i class='fa fa-cny yellow f20'></i></a></td>";
+        input += "</tr>";
+      };
+      document.write(input);
+    }
+  </script>
+  
+<section class="tui-frame-section">
+<div class="tui-frame-Tabcont" id="tmC0">
+<table class="table-border table-line txt-c table-md"><thead><script>document.write(userhead);</script></tr><tbody class="striped"><script>user("所有用户");</script></tbody></table></div>
+<div class="tui-frame-Tabcont none" id="tmC1">
+<table class="table-border table-line txt-c table-md"><thead><script>document.write(userhead);</script></tr><tbody class="striped"><script>user("供应商");</script></tbody></table></div>
+<div class="tui-frame-Tabcont none" id="tmC2">
+<table class="table-border table-line txt-c table-md"><thead><script>document.write(userhead);</script></tr><tbody class="striped"><script>user("分销商");</script></tbody></table></div>
+<div class="tui-frame-Tabcont none" id="tmC3">
+<table class="table-border table-line txt-c table-md"><thead><script>document.write(userhead);</script></tr><tbody class="striped"><script>user("网站管理员");</script></tbody></table></div>
+<div class="tui-frame-Tabcont none" id="tmC4">
+<table class="table-border table-line txt-c table-md"><thead><script>document.write(userhead);</script></tr><tbody class="striped"><script>user("个人会员");</script></tbody></table></div>
+<div class="tui-frame-Tabcont none" id="tmC5">
+<table class="table-border table-line txt-c table-md"><thead><script>document.write(userhead);</script></tr><tbody class="striped"><script>user("企业会员");</script></tbody></table></div>
+
+
+
+
+
+
+
+
+
+</section>
+<div class="rows pt15">
+<div class="cka">
+  <label class="mr15"><input id="a" name="a" type="radio"><span class="text">删除</span></label>
+  <label class="mr15"><input id="a" name="a" type="radio"><span class="text">锁定</span></label>
+  <label class="mr15"><input id="a" name="a" type="radio"><span class="text">解锁</span></label>
+  <label class="mr15"><input id="a" name="a" type="radio"><span class="text">待审</span></label>
+  <label class="mr15"><input id="a" name="a" type="radio"><span class="text">激活</span></label>
+  <label class="mr15"><input id="a" name="a" type="radio"><span class="text">移动到</span></label>
+</div>
+  <span class="ico-inp ico-r s w100">
+    <select class="inp" name='id'><option value=''>会员组</option><option value='20115756199176'>个人会员 </option></select><i class="fa fa-angle-down"></i>
+  </span>
+    <button class="btn btn-blue"><em>执 行</em></button>
+    <button class="btn btn-blue"><em>发送邮件</em></button>
+    <button class="btn btn-blue"><em>发送站内消息</em></button>
+    <button class="btn btn-blue"><em>发送手机短信</em></button>
+</div>
+
+</body>
+</html>

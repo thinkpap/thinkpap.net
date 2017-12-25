@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html lang="zh_cn">
+<head>
+  <title>css格式化/压缩</title>
+  <meta name="keywords" content="css格式化/压缩">
+  <meta name="description" content="css格式化/压缩">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script>var classname = "css格式化/压缩"</script>
+  <script src="../../g.js"></script>
+  <script src="../../models-assets/Tui-Api/load-api.js"></script>
+  <script src="../../models-assets/Think-tools/load-tool1.js"></script>
+</head>
+<body>
+  <header class="bg-blue top-fix">
+    <div class="tip-app-logo"></div>
+    <div class="f-l hid-xs">
+      <a class="btn btn_40 btn-blue" href="http://www.thinkpap.net"><i class="fa fa-home"></i> <em>网站首页</em>
+      </a><a class="btn btn_40 btn-blue" href="../Tui-api/index.html"><em>文档首页</em>
+      </a><a class="btn btn_40 btn-blue" href="index.html"><em>工具首页</em></a>
+    </div>
+    <div class="s-btn dropdown f-r">
+      <a href="javascript:void(0);" data-toggle="dropdown" class="btn btn_40 ico btn-blue"><i class="fa fa-navicon i"></i></a>
+      <div class="drop tip-app-drop right">
+        <script>links();</script>
+      </div>
+    </div>
+    <div class="tip-app-logo"></div>
+    <div class="tip-app-title">
+    <script>document.write(classname)</script></div>
+  </header>
+  <script type="text/javascript">
+function getid(id) {
+    return (typeof id == 'string') ? document.getElementById(id) : id
+};
+
+    var lCSSCoder = {
+        format: function (s) {//格式化代码
+            s = s.replace(/\s*([\{\}\:\;\,])\s*/g, "$1");
+            s = s.replace(/;\s*;/g, ";"); //清除连续分号
+            s = s.replace(/\,[\s\.\#\d]*{/g, "{");
+            s = s.replace(/([^\s])\{([^\s])/g, "$1 {\n\t$2");
+            s = s.replace(/([^\s])\}([^\n]*)/g, "$1\n}\n$2");
+            s = s.replace(/([^\s]);([^\s\}])/g, "$1;\n\t$2");
+            if ($("#chk").prop("checked")) {
+                s = s.replace(/(\r|\n|\t)/g, "");
+                s = s.replace(/(})/g, "$1\r\n");
+            }
+            return s;
+        },
+        pack: function (s) {//压缩代码
+            s = s.replace(/\/\*(.|\n)*?\*\//g, ""); //删除注释
+            s = s.replace(/\s*([\{\}\:\;\,])\s*/g, "$1");
+            s = s.replace(/\,[\s\.\#\d]*\{/g, "{"); //容错处理
+            s = s.replace(/;\s*;/g, ";"); //清除连续分号
+            s = s.match(/^\s*(\S+(\s+\S+)*)\s*$/); //去掉首尾空白
+            return (s == null) ? "" : s[1];
+        }
+    };
+    function CSS(s) {
+        getid("Code_2").value = lCSSCoder[s](getid("Code_1").value);
+        $("#Code_2").siblings(".CentHid").hide();
+    }
+
+  </script>
+
+<div class="row pl15 pr15">
+    <aside class="col-sm-2 hid-xs">
+      <div class="cross border-l3"><h1>HTML-JS-CSS工具</h1></div>
+      <div class="cms pt10">
+        <ul class="ul_list hover-ivory">
+          <li><a href="csstand.html" class="blank a">Css格式化</a></li><li class="lines"></li>
+          <li><a href="html-js.html" class="blank a">HTML-JS 代码互转</a></li><li class="lines"></li>
+          <li><a href="jstand.html" class="blank a">HTML-JS 加密/格式化</a></li><li class="lines"></li>
+        </ul>
+      </div>
+    </aside>
+    <section class="col-xs-12 col-sm-10 col-lg-10 pl30 xs-pln">
+      <div class="col-xs-12"><textarea id="Code_1" name="content" class="inp" style="height:250px" placeholder="原始CSS"></textarea></div>
+      <hr class="col-xs-12 f-l" />
+      <div class="col-xs-12"><textarea id="Code_2" name="result" class="inp" style="height:250px" placeholder="输出结果"></textarea></div>
+      <div class="col-xs-12 txt-r pt15">
+        <div class="cka cka_32 cka-blue"><label><input type="checkbox" id="chk"><span>横向排列</span></label></div>
+        <button class="btn btn_32 btn-blue" onclick="CSS('format');"><em>格式化代码</em></button>
+        <button class="btn btn_32 btn-blue" onclick="CSS('pack');" ><em>压缩代码</em></button>
+
+      </div>
+    </section>
+  </div>
+
+  <script>footers();</script>
+</body>
+</html>

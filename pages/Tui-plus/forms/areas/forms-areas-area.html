@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html lang="zh_cn">
+<head>
+  <title>地区插件-ThinkUI</title>
+  <meta name="keywords" content="地区插件,ThinkUI">
+  <meta name="description" content="最普通的地区插件,ThinkUI">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script>var classname = "地区插件"</script>
+
+  <script src="../../../../models-assets/loadjs.js"></script>
+</head>
+<body>
+<header class="bg-blue top-fix">
+  <div class="tip-app-logo"></div>
+  <div class="f-l hid-xs">
+    <a class="btn btn_40 btn-blue" href="http://www.thinkpap.net"><i class="fa fa-home"></i> <em>网站首页</em>
+    </a><a class="btn btn_40 btn-blue" href="index.html"><em>框架文档</em>
+    </a><a class="btn btn_40 btn-blue" href="p-code.html"><em>插件库</em>
+    </a><a class="btn btn_40 btn-blue" href="print-style.html"><em>样式打印</em>
+    </a><a class="btn btn_40 btn-blue" href="print-code.html"><em>生成组件</em></a>
+  </div>
+  <div class="s-btn dropdown f-r">
+    <a href="javascript:void(0);" data-toggle="dropdown" class="btn btn_40 ico btn-blue"><i class="fa fa-navicon i"></i></a>
+    <div class="drop tip-app-drop right">
+    <script>links();</script>
+    </div>
+  </div>
+  <div class="tip-app-logo"></div>
+  <div class="tip-app-title"><script>document.write(classname)</script></div>
+</header>
+<div class="row pl15 pr15">
+  <aside class="col-sm-2 hid-xs"><script>pluslinks();</script></aside>
+  <section class="col-xs-12 col-sm-10 col-lg-10 pl30 xs-pln">
+    <h1>简易便捷的地区插件</h1>
+    <hr/>
+    <div class="quote">
+      PCASClass是目前发现最简单快捷的地区插件<br />
+      页面必须引入&lt;script src='../../assets/ThinkPlus/province/PCASClass.js' charset='utf-8'&gt;&lt;/script&gt;
+    </div>
+    
+
+    <table class="table bordered table_xl table-vm break-word mt15 mb15">
+      <thead><tr class="th-blue"><th width="130">地区类型</th><th>地区演示</th></tr></thead>
+      <tbody class="td-blue">
+        <tr>
+          <td>代码格式：</td>
+          <td>
+            new PCAS("province6", "city6", "area6", "江苏省", "扬州市", "维扬区");
+          </td>
+        </tr>
+
+        <tr>
+          <td>无默认选项：</td>
+          <td>
+            <span class="select"><select name="province3" class="inp"></select><i class="fa fa-angle-down"></i></span>
+            <span class="select"><select name="city3" class="inp"></select><i class="fa fa-angle-down"></i></span>
+            <span class="select"><select name="area3" class="inp"></select><i class="fa fa-angle-down"></i></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>默认省：</td>
+          <td>
+            <span class="select"><select name="province4" class="inp"></select><i class="fa fa-angle-down"></i></span>
+            <span class="select"><select name="city4" class="inp"></select><i class="fa fa-angle-down"></i></span>
+            <span class="select"><select name="area4" class="inp"></select><i class="fa fa-angle-down"></i></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>默认省市：</td>
+          <td>
+            <span class="select"><select name="province5" class="inp"></select><i class="fa fa-angle-down"></i></span>
+            <span class="select"><select name="city5" class="inp"></select><i class="fa fa-angle-down"></i></span>
+            <span class="select"><select name="area5" class="inp"></select><i class="fa fa-angle-down"></i></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>默认省市区：</td>
+          <td>
+            <span class="select"><select name="province6" class="inp"></select><i class="fa fa-angle-down"></i></span>
+            <span class="select"><select name="city6" class="inp"></select><i class="fa fa-angle-down"></i></span>
+            <span class="select"><select name="area6" class="inp"></select><i class="fa fa-angle-down"></i></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="hid-xs">
+      <pre class="brush: js; title:[建立]">
+      new PCAS("province3", "city3", "area3");
+
+      new PCAS("province4", "city4", "area4", "江苏省");
+
+      new PCAS("province5", "city5", "area5", "江苏省", "扬州市");
+
+      new PCAS("province6", "city6", "area6", "江苏省", "扬州市", "维扬区");
+
+      </pre>
+    </div>
+
+
+  </section>
+</div>
+  <script>
+      new PCAS("province3", "city3", "area3");
+      new PCAS("province4", "city4", "area4", "江苏省");
+      new PCAS("province5", "city5", "area5", "江苏省", "扬州市");
+      new PCAS("province6", "city6", "area6", "江苏省", "扬州市", "维扬区");
+  </script>
+
+<script>footers();</script>
+</body>
+</html>

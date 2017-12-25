@@ -1,0 +1,55 @@
+﻿
+.menu{padding:15px 0; height:60px}
+.logo{height:40px; float:left}
+.logotitle{font-size:25px; line-height:25px; color:#29a5de;font-family:Arial}
+.logoftitle{font-size:13px; line-height:25px;  color:#BEBEBE;font-family:Arial}
+
+.slider{height:380px}
+
+.sliderh1{padding-bottom:25px; font-size:35px; line-height:50px; padding-top:10px; color:#FFF}
+.sliderbtn .btn{border:1px solid #FFF; background:transparent}.sliderbtn .btn .ct{color:#FFF}
+.sliderbtn .btn:hover{background:#FFF}.sliderbtn .btn:hover .ct{color:#000}
+.slidercont{line-height:25px; color:#FFF}
+
+.slidericon{height:100px; background:url(images//SM-anrui.png) no-repeat}
+.sliderpic{height:100%;background:url(images/timg.jpg) no-repeat;background-size:100% 100%; position:relative}
+.sliderpiccover{background:#000000;position:absolute; left:0; top:0; right:0; bottom:0; opacity:0.6}
+.sliderpiccover:hover{ opacity:0.2}
+
+.indextitle{font-size:35px}
+.cell{height:280px; cursor:pointer}
+.cell:hover{background:#fafafc}
+
+.celtit{padding-top:20px;  font-size:20px}
+.celetit{line-height:40px; font-size:18px}
+.celico{height:100px}
+.celico1{background:url(images/link1.jpg) no-repeat center 20px}
+.celico2{background:url(images/link2.jpg) no-repeat center 20px}
+.celico3{background:url(images/link3.jpg) no-repeat center 20px}
+.celico4{background:url(images/link4.jpg) no-repeat center 20px}
+
+.start{height:200px;padding:30px 0 25px 0; background:url(images/trial-slice-01.png) center top no-repeat}
+
+.startitle{padding:15px 0 0 0; font-size:40px}
+.startitle2{padding:15px 0 25px 0;font-size:16px; color:#000}
+
+@media (max-width:768px){
+
+.tui-row{width:100%}
+.sliderh1{padding-bottom:25px; font-size:25px; line-height:40px; padding-top:10px; color:#FFF}
+.indextitle{font-size:25px}
+
+}
+
+@media (min-width:768px){
+
+.tui-row{width:100%}
+
+}
+
+
+@media (min-width:1200px){
+
+.tui-row{width:1100px}
+}
+

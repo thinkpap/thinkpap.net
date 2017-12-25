@@ -1,0 +1,167 @@
+﻿<!doctype html>
+<html lang="zh_cn">
+<head>
+  <title>日期插件-ThinkUI</title>
+  <meta name="keywords" content="日期插件,ThinkUI">
+  <meta name="description" content="日期插件,ThinkUI">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script>var classname = ""</script>
+  <script src="../assets/Tui-doc/pageload.js"></script>
+</head>
+<body>
+<header class="bg-blue top-fix">
+  <div class="tip-app-logo"></div>
+  <div class="f-l hid-xs">
+    <a class="btn btn_40 btn-blue" href="http://www.thinkpap.net"><i class="fa fa-home"></i> <em>网站首页</em>
+    </a><a class="btn btn_40 btn-blue" href="index.html"><em>框架文档</em>
+    </a><a class="btn btn_40 btn-blue" href="p-code.html"><em>插件库</em>
+    </a><a class="btn btn_40 btn-blue" href="print-style.html"><em>样式打印</em>
+    </a><a class="btn btn_40 btn-blue" href="print-code.html"><em>生成组件</em></a>
+  </div>
+  <div class="s-btn dropdown f-r">
+    <a href="javascript:void(0);" data-toggle="dropdown" class="btn btn_40 ico btn-blue"><i class="fa fa-navicon i"></i></a>
+    <div class="drop tip-app-drop right">
+    <script>links();</script>
+    </div>
+  </div>
+  <div class="tip-app-logo"></div>
+  <div class="tip-app-title"><script>document.write(classname)</script></div>
+</header>
+<div class="row pl15 pr15">
+  <aside class="col-sm-2 hid-xs"><script>pluslinks();</script></aside>
+  <section class="col-xs-12 col-sm-10 col-lg-10 pl30 xs-pln">
+    <h1>代码查看与显示插件</h1>
+    <hr/>
+    <div class="quote">
+      My97DatePicker是一款非常优秀的日期插件，可根据不同的场景需求，进行日期样式设定，<a href="http://www.my97.net/demo/index.htm" class="blue" target="_blank">进入官网</a>
+    </div>
+
+    <table class="table bordered table-vm mt15 break-word">
+      <thead><tr><th class="w120">日期类型</th><th width="250">验证演示</th><th>代码样式</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>基本格式</td>
+          <td colspan="2"> &lt;input id="d11" type="text" onClick="WdatePicker()"/&gt; 所有的方法全部用{}封装在()中：WdatePicker({********})</td>
+        </tr>
+        <tr>
+          <td>按钮传值</td>
+          <td>
+            <div class="s-inp">
+              <input class="inp" id="d12" />
+              <div class="c w5"><a class="btn btn-blue ico" onclick="WdatePicker({ el: 'd12' })"><i class="fa fa-calendar"></i></a></div>
+            </div>
+          </td>
+          <td>{el: 'd12'}</td>
+        </tr>
+        <tr>
+          <td>弹出位置</td>
+          <td><input class="inp" name="title" type='text' value='' onClick="WdatePicker({ position: { left: 100, top: 50 } })"></td>
+          <td>{position: { left: 100, top: 50 }}</td>
+        </tr>
+        <tr>
+          <td>基本日期</td>
+          <td><input class="inp" name="title" type='text' value='' onClick="WdatePicker()"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>完整日期</td>
+          <td><input class="inp" name="title" type='text' value='' onClick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss' })"></td>
+          <td>{dateFmt: 'yyyy-MM-dd HH:mm:ss'}</td>
+        </tr>
+        <tr>
+          <td>显示周</td>
+          <td><input class="inp" name="title" type='text' value='' onClick="WdatePicker({ isShowWeek: true })"></td>
+          <td>{isShowWeek: true}</td>
+        </tr>
+        <tr>
+          <td>获取周</td>
+          <td><input type='text' class="inp w100" id="d122" onclick="WdatePicker({isShowWeek:true,onpicked:function() {$dp.$('d122_1').value=$dp.cal.getP('W','W');$dp.$('d122_2').value=$dp.cal.getP('W','WW');}})">
+<input class="inp w50" id="d122_1" type='text' value=''> <input class="inp w50" id="d122_2" type='text' value=''></td>
+          <td>{isShowWeek:true,onpicked:function() {$dp.$('d122_1').value=$dp.cal.getP('W','W');$dp.$('d122_2').value=$dp.cal.getP('W','WW');}}</td>
+        </tr>
+        <tr>
+          <td>第一天</td>
+          <td><input class="inp" name="title" type='text' value='' onClick="WdatePicker({ firstDayOfWeek: 1 })"></td>
+          <td>{firstDayOfWeek:1}</td>
+        </tr>
+        <tr>
+          <td>起始日期</td>
+          <td><input class="inp" name="title" type='text' value='' onClick="WdatePicker({ startDate: '1980-05-01' })"></td>
+          <td>{startDate:'1980-05-01'}{startDate:'%y-%M-01 00:00:00'}(当前xxx 用%获得)</td>
+        </tr>
+        <tr>
+          <td>星期, 月 日, 年</td>
+          <td><input class="inp" name="title" type='text' value='' onClick="WdatePicker({ dateFmt: 'DD,MMMM,d,yyyy' })"></td>
+          <td>{dateFmt: 'DD,MMMM,d,yyyy'}</td>
+        </tr>
+        <tr>
+          <td>可识别的日期值</td>
+          <td><input class="inp w200" name="title" type='text' value='' id="d244" type="text" onclick="WdatePicker({dateFmt:'yyyy年M月d日',vel:'d244_2'})"> <input class="inp w200" id="d244_2" type="text" /></td>
+          <td>{dateFmt:'yyyy年M月d日',vel:'d244_2'}</td>
+        </tr>
+        <tr>
+          <td>双月日历</td>
+          <td><input class="inp" name="title" type='text' value='' id="d2444" onclick="WdatePicker({doubleCalendar:true,dateFmt:'yyyy-MM-dd'})"></td>
+          <td>{doubleCalendar:true,dateFmt:'yyyy-MM-dd'}</td>
+        </tr>
+        <tr>
+          <td>限制范围</td>
+          <td><input class="inp" name="title" type='text' value='' id="d424" onclick="WdatePicker({ doubleCalendar: true, dateFmt: 'yyyy-M-d H:mm:ss', minDate: '%y-%M-%d 7:00:00', maxDate: '%y-{%M+1}-{%d+10} 21:00:00' })"></td>
+          <td>{doubleCalendar: true, dateFmt: 'yyyy-M-d H:mm:ss', minDate: '%y-%M-%d 7:00:00', maxDate: '%y-{%M+1}-{%d+10} 21:00:00' }</td>
+        </tr>
+        <tr>
+          <td>禁用5/15/25</td>
+          <td><input class="inp" name="title" type='text' value='' id="d451" onclick="WdatePicker({disabledDates:['5$']})"></td>
+          <td>{disabledDates:['5$']}</td>
+        </tr>
+        <tr>
+          <td>只启用5/15/25</td>
+          <td><input class="inp" name="title" type='text' value='' id="d451" onclick="WdatePicker({ opposite: true, disabledDates: ['5$'] })"></td>
+          <td>{opposite:true,disabledDates:['5$']}</td>
+        </tr>
+        <tr>
+          <td>日期分段</td>
+          <td><input class="inp" name="title" type='text' value='' id="d454" onclick="WdatePicker({minDate:'%y-%M-01',maxDate:'%y-%M-%ld',disabledDates:['0[4-7]$','1[1-5]$','2[58]$'],disabledDays:[1,3,6]})"></td>
+          <td>{minDate:'%y-%M-01',maxDate:'%y-%M-%ld',disabledDates:['0[4-7]$','1[1-5]$','2[58]$'],disabledDays:[1,3,6]}</td>
+        </tr>
+        <tr>
+          <td>高亮周一 周五</td>
+          <td><input class="inp" name="title" type='text' value='' id="d471" onclick="WdatePicker({specialDays:[1,5]})"></td>
+          <td>{specialDays:[1,5]}</td>
+        </tr>
+        <tr>
+          <td>高亮1 15 19</td>
+          <td><input class="inp" name="title" type='text' value='' id="d472" onclick="WdatePicker({ specialDates: ['....-..-03', '....-..-15', '....-..-19'] })"></td>
+          <td>{ specialDates: ['....-..-03', '....-..-15', '....-..-19'] }</td>
+        </tr>
+        <tr>
+          <td>前面的日期不能大于后面的日期</td>
+          <td><input class="inp" id="d4311" type="text" onclick="WdatePicker({ maxDate: '#F{$dp.$D(\'d4312\')||\'2020-10-01\'}' })" />
+              <input class="inp" id="d4312" type="text" onclick="WdatePicker({ minDate: '#F{$dp.$D(\'d4311\')}', maxDate: '2020-10-01' })" />
+          </td>
+          <td>{ maxDate: '#F{$dp.$D(\'d4312\')||\'2020-10-01\'}' }{ minDate: '#F{$dp.$D(\'d4311\')}', maxDate: '2020-10-01' }</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+    <div class="hid-xs">
+      <pre class="brush: js; title:[代码显示器];">
+         &lt;input id="d11" type="text" onClick="WdatePicker()"/&gt;      </pre>
+    </div>
+
+
+  </section>
+</div>
+
+<script>footers();</script>
+</body>
+</html>

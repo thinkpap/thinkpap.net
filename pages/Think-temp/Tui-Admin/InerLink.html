@@ -1,0 +1,71 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+<header class="pn">
+    <div class="s-btn">
+      <a class="btn btn-default"  onclick="adddata('添加作者', '700px', '650px', 'InerLinkAdd.html')"><i class="fa fa-plus"></i><em>添加</em>
+      </a><a class="btn btn-default"><i class="fa fa-external-link"></i><em>编辑</em>
+      </a><a class="btn btn-default"><i class="fa fa-trash"></i><em>删除</em>
+      </a><a class="btn btn-default"><i class="fa fa-times"></i><em>锁定</em>
+      </a><a class="btn btn-default"><i class="fa fa-cog"></i><em>解锁</em></a>
+    </div>
+</header>
+
+<section class="tui-frame-section">
+
+
+  <table class="table table-md table-border table-line hover-blue txt-c">
+    <thead class="strong">
+    <tr>
+      <th width='50'><div class="cka"><label><input name="select" type="checkbox" onclick="if (this.checked){Select(0)}else{Select(2)}"><span></span></label></div></th>
+      <th width='30'>ID</th>
+      <th width='120'>链接名称</th>
+      <th>链接地址</th>
+      <th></th>
+      <th width='80' class="tl">目标窗口</th>
+      <th width='60'>编辑</th>
+      <th width='60'>删除</th>
+      <th width='60'>状态</th>
+    </tr>
+    </thead>
+    <tbody>
+      <script>
+        var key = {
+          1: '<a class="btn btn_22 btn-success ico o"><i class="fa fa-check f14"></i></a>',
+          2: '<a class="btn btn_22 btn-orange ico o"><i class="fa fa-minus f14"></i></a>'
+        };
+
+          var inerlink = "";
+          for (var i = 0; i < 25; i++) {
+            inerlink += "<tr id='u" + i + "' onclick=chk_idiv('" + i + "') class='editadd'>";
+            inerlink += "<td><div class='cka'><label><input name='id' type='checkbox' id='c" + i + "' value='" + i + "'><span></span></label></div></td>";
+            inerlink += "<td>" + i + "</td>";
+            inerlink += "<td>内部链接" + i + "</td>";
+            inerlink += "<td class='txt-l'>http://www.baidu.com/thinkpap?" + i + "</td>";
+            inerlink += "<td></td>";
+            inerlink += "<td>_blank</td>";
+            inerlink += "<td><a class='btn btn_22 ico o'><i class='fa fa-edit blue f20'></i></a></td>";
+            inerlink += "<td><a class='btn btn_22 ico o'><i class='fa fa-times red f20'></i></a></td>";
+            inerlink += "<td>" + key[(Math.floor(Math.random() * 2) + 1)] + "</td>";
+            inerlink += "</tr>";
+          }
+          document.write(inerlink);
+      </script>
+
+
+    </tbody>
+  </table>
+  <div class="page page-32 page-blue fr mt15"><ul><li><a href="#">上一页</a></li><li class="curr"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#">下一页</a></li><li><a href="#">共1234页</a></li></ul></div>
+
+
+</section>
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageend.js"></script>
+
+</body>
+</html>

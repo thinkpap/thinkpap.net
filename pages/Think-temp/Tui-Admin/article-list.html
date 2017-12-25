@@ -1,0 +1,109 @@
+﻿<!doctype html><html lang="zh_cn"><head>
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../../thinkui/Thinkmodel/Tui-Admin/pageload.js"></script>
+</head>
+<body>
+<div class="rows">
+  <div class="s-btn">
+    <a class="btn btn-28 btn-default"><i class="fa fa-plus"></i><em>添加</em>
+    </a><a class="btn btn-28 btn-default"><i class="fa fa-external-link"></i><em>审核</em>
+    </a><a class="btn btn-28 btn-default"><i class="fa fa-trash"></i><em>回收站</em>
+    </a><a class="btn btn-28 btn-default"><i class="fa fa-times"></i><em>删除</em>
+    </a><a class="btn btn-28 btn-default"><i class="fa fa-cog"></i><em>属性</em>
+    </a><a class="btn btn-28 btn-default"><i class="fa fa-arrows"></i><em>移动</em>
+    </a><a class="btn btn-28 btn-default"><i class="fa fa-file-text"></i><em>专题</em></a>
+  </div>
+  <div class="s-btn">
+    <a class="btn btn-28 btn-default"><i class="fa fa-edit"></i><em>待审文章</em>
+    </a><a class="btn btn-28 btn-default"><i class="fa fa-reply"></i><em>被退文章</em>
+    </a><a class="btn btn-28 btn-default"><i class="fa fa-building-o"></i><em>草稿文章</em></a>
+  </div>
+  <a class="btn btn-28 btn-default ico fr" onclick='showhidediv("artsech")'><i class="fa fa-search"></i></a>
+  <span class="ico-inp ico-r s inp-28 w200 fr"><select class="inp"><option value="" selected>栏目跳转</option><option value='20115756199176'>──动漫资讯动漫资讯动漫资讯 </option></select><i class="fa fa-angle-down"></i></span>
+
+</div>
+
+<div class="rows pt15 none" id="artsech">
+  <span class="ico-inp ico-r s inp-28 w100"><select class="inp"><option value=''>- 属性 -</option><option value=''>签收</option></select><i class="fa fa-angle-down"></i></span>
+  <span class="ico-inp ico-r s inp-28 w100"><select class="inp"><option value='' selected>- 排序 -</option><option value=''>默认id↓</option></select><i class="fa fa-angle-down"></i></span>
+  <span class="ico-inp ico-r s inp-28 w100"><select class="inp"><option value='' selected>查询条件</option><option value=''>默认id↓</option></select><i class="fa fa-angle-down"></i></span>
+
+
+  <input class="inp w150 inp-28" type='text' placeholder="标题关键字,可留空" value='' size='12' name='keyword'>
+  <span id='SearchDate'>
+      <span class="btn btn-28 ico"><em>从</em></span>
+      <input class="inp w100 inp-28" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd' });" type='text' size='12' name='StartDate' id='StartDate'> 
+    <span class="btn btn-28 ico"><em>至</em></span>
+      <input class="inp w100 inp-28" type='text' size=12 name='EndDate' id='EndDate' onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd' });">
+    </span>
+  <a class='btn btn-azure btn-28' value=''><em>开始筛选</em></a>
+  <p class="btn btn-28 fr">共有：99条数据</p>
+
+</div>
+
+<div class="rows pt15">
+  <table class="table_xl table-line hover-l-blue txt-c word-break">
+    <thead>
+      <tr class="strong">
+        <th width="30"><div class="cka cs b"><label><input name="select" type="checkbox" onclick="if (this.checked){Select(0)}else{Select(2)}"><span class="text"></span></label></div></th>
+        <th class="txt-l">标题</th>
+        <th width="90">录入员</th>
+        <th width="100">属 性</th>
+        <th width="70">状 态</th>
+        <th width="70">操 作</th>
+      </tr>
+    </thead>
+    <tbody class="striped">
+    <script>
+      var articleout = "";
+      for (var i = 0; i < 14; i++) {
+        articleout += "<tr id='u" + i + "' onclick=chk_idiv('" + i + "')>";
+        articleout += "<td><div class='cka cs b'><label><input name='id' type='checkbox' id='c" + i + "' value='" + i + "'><span class='text'></span></label></div></td>";
+        articleout += "<td class='txt-l'><p class='btn btn_22 btn-blue mr10'><em>图片</em></p>" + i + "乾隆玉玺在法国拍卖 成交价格超过了预先估价的20倍</td>";
+        articleout += "<td>ThinkPaP</td>";
+        articleout += "<td>头 幻 热 荐</td>";
+        articleout += "<td>已审核</td>";
+        articleout += "<td class='prn'><a class='btn btn-danger btn_22 delete'><i class='fa fa-trash'></i><em>删除</em></a> <a class='btn btn-azure btn_22'><i class='fa fa-pencil'></i><em>编辑</em></a></td>";
+        articleout += "</tr>";
+      };
+
+      document.write(articleout);
+
+    </script>
+    </tbody>
+  </table>
+
+
+</div>
+<div class="rows pt15 pl15 pr15">
+  <button class="btn btn-blue"><i class='fa fa-trash'></i><em>发布</em></button> <button class="btn btn-blue mr10"><i class='fa fa-trash'></i><em>移动</em></button>
+  <a class="btn" href='javascript:void(0)' onclick='javascript:Select(0)'><em>全选</em></a>
+  <a class="btn" href='javascript:void(0)' onclick='javascript:Select(1)'><em>反选</em></a>
+  <a class="btn" href='javascript:void(0)' onclick='javascript:Select(2)'><em>不选</em></a>
+  <div class="page page-blue fr">
+    <ul>
+      <li><span class="btn"><em>查询出 186 条记录，每页</em></span></li>
+      <li><span class="select"><select class="inp"><option selected>10</option><option>20</option><option>100</option></select><i class="fa fa-angle-down"></i></span></li>
+      <li><span class="btn"><em>条，共 11 页</em></span></li>
+      <li class="disabled"><a href="#">上一页</a></li>
+      <li class="curr"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">........</a></li>
+      <li><a href="#">99</a></li>
+      <li><a href="#">下一页</a></li>
+      <li><input class="inp w50" type="text" value="" placeholder="跳转"/></li>
+      <li><span class="btn btn-blue"><em>转到</em></span></li>
+    </ul>
+  </div>
+
+</div>
+  <script>botctrls();</script>
+  <script src="../../thinkui/Thinkmodel/Tui-Admin/pageend.js"></script>
+
+
+</body>
+</html>

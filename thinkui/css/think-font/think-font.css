@@ -1,0 +1,51 @@
+
+@font-face {font-family:"tp";
+  src:url('think-font.eot'); /* IE9*/
+  src:url('think-font.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('think-font.woff') format('woff'), /* chrome, firefox */
+  url('think-font.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('think-font.svg#tp') format('svg'); /* iOS 4.1- */
+}
+
+.tp {
+  font-family:"tp" !important;
+  font-style:normal;
+}
+.tp:before{display:inline-block}
+.tp-cloud-uploadd:before { content:"\e63d"; }
+
+.tp-uploadf:before { content:"\e640"; }
+
+.tp-uploade:before { content:"\e6cb"; }
+
+.tp-downloade:before { content:"\e65b"; }
+
+.tp-uploadd:before { content:"\e641"; }
+
+.tp-uploadc:before { content:"\e642"; }
+
+.tp-uploadb:before { content:"\e657"; }
+
+.tp-downloadd:before { content:"\e65c"; }
+
+.tp-downloadc:before { content:"\e699"; }
+
+.tp-cloud-uploadc:before { content:"\e6f9"; }
+
+.tp-cloud-downloadd:before { content:"\e6fa"; }
+
+.tp-downloadb:before { content:"\e65f"; }
+
+.tp-downloada:before { content:"\e81c"; }
+
+.tp-uploada:before { content:"\e6a3"; }
+
+.tp-cloud-downloadc:before { content:"\e66d"; }
+
+.tp-cloud-downloadb:before { content:"\e67d"; }
+
+.tp-cloud-uploadb:before { content:"\e63f"; }
+
+.tp-cloud-uploada:before { content:"\e666"; }
+
+.tp-cloud-downloada:before { content:"\e85b"; }

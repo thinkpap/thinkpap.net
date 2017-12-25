@@ -1,0 +1,8 @@
+﻿body{padding-top: 40px}
+.banner {height: 500px;background: url('images/banner.jpg') center 0;}
+@media (max-width:768px){
+.banner {height: 180px;background: url('images/banner.jpg') right bottom;}
+}
+
+
+

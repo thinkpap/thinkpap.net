@@ -1,0 +1,60 @@
+﻿body{ padding-top: 20px;padding-left: 20px; padding-right: 20px;padding-bottom: 50px}
+
+/*默认尺寸*/
+.btn,.inp,.cka,.ckb,.ckb span{height:34px}
+.btn{padding:0.06rem 0.08rem;}.cka{padding: 6px 0}
+.inp,.ckb span{padding:0 0.08rem;}
+.btn.ico i,.btn.ico em,.btn.lab i{height: 32px; line-height: 32px;}
+.btn i,.ico-inp i{font-size: 16px}
+.btn em,.inp,.ckb .text{font-size:14px}
+.btn i{margin-right: 7px;}
+.btn.lab i{margin: -6px 10px -6px -8px}
+.btn.ico,.ico-inp i{width:34px;height:34px}
+.btn.ico i,.btn.ico em,.btn.lab i{width:32px;}
+.btn.d{padding:6px 8px}
+.ico-inp i,.ckb span{line-height: 34px}
+.ico-inp .inp{padding-left:0.34rem}
+.ico-inp.ico-r .inp{padding-right:0.34rem; padding-left:8px}
+.ico-inp.block .inp{padding-left:0.40rem;}
+.ico-inp.block.ico-r .inp{padding-right:0.40rem; padding-left:8px}
+.ico-inp.ico-r i.o{width:0.30rem;height:0.30rem;line-height:0.28rem;top:0.02rem;right:0.05rem}
+
+
+
+.inp:focus{background: #fffbde; border-color: #99d8f5}
+
+.headertab{padding-left: 1px}
+.headertab li{display: inline-block; margin-left: -1px}
+.headertab li.pactive .btn{background: #2dc3e8}.headertab li .btn i{color:#2dc3e8}
+.headertab li.pactive .btn i,.headertab li.pactive .btn em{color:#FFF}
+
+.add_area{border-top:1px solid #E5E5E5; margin-top: -1px}
+
+
+
+.ctrol{height:0.35rem;padding:0.06rem 0.10rem;background:#fbfbfb;border-right:1px solid #f3f3f3; position: fixed; bottom:0; left: 0; right: 0; z-index: 9999999999999999999999999}
+
+
+
+
+header:after,section:after{content:"";display:block;height:0;clear:both;visibility:hidden}
+header ul{padding-left: 1px}
+header li{display: inline-block; margin-left: -1px}
+
+section{width:100%;padding-top: 15px}
+section.t_line{border-top:1px solid #E5E5E5; margin-top: -1px}
+
+
+section dl{width:100%;}
+section dt,section dd{ line-height: 34px;padding: 8px 5px;word-break:keep-all;white-space:nowrap; vertical-align: middle; float: left}
+section dt{width: 100px; text-align: right}
+section dd{width: 400px; text-align: left}
+section table td{line-height: 34px; padding: 5px 5px; text-align: left; vertical-align: middle}
+
+section dd .title{width: 100px; line-height: 34px; display: inline-block; padding: 0 5px}
+
+
+section .linetitle{width:100%;height: 40px; line-height: 40px; padding-left: 20px; margin-bottom: 15px; font-size: 18px; background: #f6f6f6;  border-left:3px solid #2DC3E8}
+
+
+.laybot{height: 48px; padding: 10px 15px; position: fixed; left: 0; right: 0; bottom: 0; text-align: right; background: #f8f8f8; border-top:1px solid #eeeeee }
